@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
-*main - entry point 
-*Return: 0 when succed
+*main-entry point 
+*Return: (0) mean program executed
 **/
 int main(void)
 {
