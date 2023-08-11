@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-*main
+*main: display size of numbers
 *Return: (0) mean program executed
 **/
 int main(void)
