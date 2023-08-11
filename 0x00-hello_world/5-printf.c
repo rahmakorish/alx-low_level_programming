@@ -1,7 +1,6 @@
 #include <stdio.h>
 /**
-*main-this is entry point for program
-*prints a sentence 
+*main-this is entry point for program 
 *Return: (0) if code executed without compilation error
 **/
 int main(void)
