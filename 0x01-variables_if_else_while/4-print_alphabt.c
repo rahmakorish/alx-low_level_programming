@@ -14,7 +14,7 @@ int main(void)
 		if (i != 101)
 		if (i != 113)
 		putchar(i);
-		i++;	
+		i++;
 	};
 	putchar(10);
 	return (0);
