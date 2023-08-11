@@ -7,14 +7,14 @@
 int main(void)
 {
 	int i = 48;
-	
+
 	while (i < 58)
 	{
 		putchar(i);
-		putchar(32);
 		putchar(44);
+		putchar(32);
 		i++;
 	};
-	putchar(44);
+	putchar(32);
 	return (0);
 }
