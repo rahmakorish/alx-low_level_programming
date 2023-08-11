@@ -2,7 +2,7 @@
 /**
  * main - this is entry point for program
  * prints a sentence 
- * return: (0) if code executed without compilation error
+ * Return: (0) if code executed without compilation error
  */
 int main(void)
 {
