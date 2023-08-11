@@ -21,5 +21,5 @@ int main(void)
 		x++;
 	};
 	putchar(10);
-	return(0);
+	return (0);
 }
