@@ -1,6 +1,8 @@
 #include <stdio.h>
 /**
  * main - this entry point for the program
+ *
+ * returns 0 if code executed 
  */
 int main(void)
 {
