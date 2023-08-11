@@ -11,10 +11,10 @@ int main(void)
 	while (i < 58)
 	{
 		putchar(i);
-		putchar(44);
 		putchar(32);
+		putchar(44);
 		i++;
 	};
-	putchar(32);
+	putchar(44);
 	return (0);
 }
