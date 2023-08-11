@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-*main-this is entry point for program 
+*main-entry
 *Return: (0) if code executed without compilation error
 **/
 int main(void)
