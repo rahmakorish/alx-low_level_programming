@@ -1,0 +1,19 @@
+#include <time.h>
+#include <stdio.h>
+/**
+ * **main-entry
+ * **Return:0succes
+ * **/
+int main(void)
+{	
+	int i = 48;
+	
+	while (i < 58)
+	{
+		putchar(i);
+		putchar(44);
+		putchar(32);
+		i++;
+	};
+	return (0);
+}
