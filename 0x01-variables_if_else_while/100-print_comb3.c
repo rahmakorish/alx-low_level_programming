@@ -6,19 +6,17 @@
  * **/
 int main(void)
 {
-	int i = 48;
-	int x = 49;
-
-	for(i; i<58; i++)
+	for(int i = 48; i<58;)
 	{ 
 
-		for(x; x<58; x++)
+		for(int x = 49; x<58; x++)
 		{
 			putchar(i);
 			putchar(x);
 			putchar(44);
 			putchar(32);
 		}
+		i++;
 	}
 	return (0);
 }
