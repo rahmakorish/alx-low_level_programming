@@ -5,7 +5,7 @@
  * **Return:0succes
  * **/
 int main(void)
-{	
+{
 	int i = 48;
 	
 	while (i < 58)
@@ -15,5 +15,6 @@ int main(void)
 		putchar(32);
 		i++;
 	};
+	putchar(44);
 	return (0);
 }
