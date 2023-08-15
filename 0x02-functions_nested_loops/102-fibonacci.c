@@ -7,19 +7,26 @@
 **/
 int main(void)
 {
-	int x = 1;
-	int y = 0;
+	long long int x = 1;
+	long long int y = 0;
 	int count = 0;
-	
-	while (count < 51)
-	{
-		int z = x + y;
 
-		printf("%d, ", z);
+	while (count < 50)
+	{
+		long long int z = x + y;
+
+		if (z == 20365011074)
+		{
+			printf("%lld", z);
+			printf("\n");
+			return (0);
+		}
+
+		printf("%lld, ", z);
 		y = x;
 		x = z;
 		count++;
 	}
-	printf(" ");
+	printf("\n");
 	return (0);
 }
