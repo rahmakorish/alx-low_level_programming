@@ -5,7 +5,7 @@
 *Return:0succes
 **/
 int main(void)
-{ void print_alphabet();	}
+{ void print_alphabet(); return(0);	}
 
 	/**
 	  *print_alphabe-prints alphabet in lower case
