@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 
+int print_sign(int n);
 int _isalpha(int c);
 int add(int x,int y);
 int _islower(int c);
