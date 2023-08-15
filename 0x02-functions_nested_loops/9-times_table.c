@@ -12,13 +12,13 @@ void times_table(void)
 
 	while (x < 9)
 	{
-		while(y < 9)
+		while (y < 9)
 		{
 			int z = x * y;
+
 			x++;
 			y++;
-		
-		printf ("%d, ", z);
-	};
+			printf("%d, ", z);
+		};
 	}
 }
