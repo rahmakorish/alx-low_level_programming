@@ -4,18 +4,18 @@
  *@x:user input to check
  *Return:digit of input
  **/
-int print_last_digit(int x)
+int print_last_digit(long int x)
 {
-	int y = x % 10;
+/*	int y = x % 10;*/
 
 	if (x > 0 )
 	{
-		_putchar(y);
+		
 		return (x % 10);
 	}
 	else
 	{
-		_putchar(y);
+		
 		return (x % 10);
 	}
 }
