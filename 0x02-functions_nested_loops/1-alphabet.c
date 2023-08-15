@@ -1,26 +1,26 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
+#include "main.h"
+
 /**
 *main-entry
 *Return:0succes
 **/
 int main(void)
-{	/**
+{ void print_alphabet();	}
+
+	/**
 	  *print_alphabe-prints alphabet in lower case
 	  *folowed by newline
 	  *Retun:0success
 	  **/
 	void print_alphabet(void)
 	{
-		int i = 97 ;
+		int i =97;
 	       
 		while(i < 123 )
 		{
-			putchar (i);
+			_putchar (i);
 			i++;
 		};
-		putchar ('\n');
+		_putchar ('\n');
 	};
-	print_alphabet();
-}
+	
