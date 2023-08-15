@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 
+int print_last_digit(int x);
 int _abs(int x);
 int print_sign(int n);
 int _isalpha(int c);
