@@ -7,13 +7,15 @@
 **/
 int main(void)
 {
-	int x=1;
-	int y=0;
+	int x = 1;
+	int y = 0;
 	int count = 0;
 	
-	while (count < 51)
+	while (count < 50)
 	{
 		int z = x + y;
+
+		if(z>0)
 		printf("%d, ", z);
 		y = x;
 		x = z;
