@@ -7,22 +7,22 @@
 **/
 int main(void)
 {
-	long long int x = 1;
-	long long int y = 0;
+	long int x = 1;
+	long int y = 0;
 	int count = 0;
 
 	while (count < 50)
 	{
-		long long int z = x + y;
+		long int z = x + y;
 
 		if (z == 20365011074)
 		{
-			printf("%lld", z);
+			printf("%ld", z);
 			printf("\n");
 			return (0);
 		}
 
-		printf("%lld, ", z);
+		printf("%ld, ", z);
 		y = x;
 		x = z;
 		count++;
