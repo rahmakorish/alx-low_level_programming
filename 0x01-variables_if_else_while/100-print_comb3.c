@@ -6,11 +6,11 @@
  * **/
 int main(void)
 {
-	//int i = 48;
-	//int x = 58;
-	for (int i =48;  i<58; )
+	int i = 48;
+	int x = 48;
+	while (i<58)
 	{ 
-		for(int x =48; x < 58; x++)
+		while( x < 58)
 		{       //if ( i == x)
 			//{break;}
 			putchar(i);
