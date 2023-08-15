@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 
+int _abs(int x);
 int print_sign(int n);
 int _isalpha(int c);
 int add(int x,int y);
