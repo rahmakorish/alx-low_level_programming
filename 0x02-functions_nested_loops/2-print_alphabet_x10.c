@@ -7,7 +7,7 @@ void print_alphabet_x10(void)
 {
 	int x = 0;
 	int y = 97;
-	
+
 	while (x < 10)
 	{
 		while (y < 123)
@@ -16,5 +16,6 @@ void print_alphabet_x10(void)
 			y++;
 		};
 		x++;
+		putchar('\n')
 	}
 }
