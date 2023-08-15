@@ -15,7 +15,6 @@ int main(void)
 	{
 		int z = x + y;
 
-		if(z > 0)
 		printf("%d, ", z);
 		y = x;
 		x = z;
