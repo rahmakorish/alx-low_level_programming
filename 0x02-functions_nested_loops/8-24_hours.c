@@ -6,5 +6,5 @@
  **/
 void jack_bauer(void)
 {
-	_putchar(00:00);
+	_putchar(00\:00);
 }
