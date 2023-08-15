@@ -7,11 +7,11 @@
 int _islower(int c)
 {
 	if (c < 90)
-	
+	{
 		if (c > 65)
 	
 		return (0);
-	
+	}
 	
 	else
 	
