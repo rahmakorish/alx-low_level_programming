@@ -13,4 +13,9 @@ int print_last_digit(int x)
 		_putchar(y);
 		return (x % 10);
 	}
+	else
+	{
+		_putchar(y);
+		return (x % 10);
+	}
 }
