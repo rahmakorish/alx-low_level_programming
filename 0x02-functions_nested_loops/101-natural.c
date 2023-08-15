@@ -5,7 +5,7 @@
 *main-entry
 *Return:0succes
 **/
-void main(void)
+int main(void)
 {
 	int i = 0;
 	int sum = 0;
@@ -18,5 +18,5 @@ void main(void)
 		}
 		i++;}
 		printf ("%d\n", sum);
-	
+		return (0);	
 }
