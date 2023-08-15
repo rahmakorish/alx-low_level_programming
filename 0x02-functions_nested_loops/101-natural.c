@@ -5,7 +5,7 @@
 *main-entry
 *Return:0succes
 **/
-int main(void)
+void main(void)
 {
 	int i = 0;
 	int sum = 0;
