@@ -22,5 +22,5 @@ int main(void)
 			i++;
 		};
 		_putchar ('\n');
-	};
+	}
 	
