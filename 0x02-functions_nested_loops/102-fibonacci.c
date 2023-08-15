@@ -19,4 +19,6 @@ int main(void)
 		x = z;
 		count++;
 	}
+	printf(" ");
+	return (0);
 }
