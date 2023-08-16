@@ -6,13 +6,15 @@
  **/
 int _abs(int x)
 {
+	int z = x % 10;
+
 	if(x > 0)
 	{	
-		return (x%10);
+		return (z);
 	}
 	else if (x < 0)
 	{
-		x= x * -1;
-		return (x % 10);
+		z= z * -1;
+		return (z);
 	};
 }
