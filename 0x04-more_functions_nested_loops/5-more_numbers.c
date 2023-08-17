@@ -15,7 +15,7 @@ void more_numbers(void)
 		{
 			_putchar(i);
 			i++;
-		};
+		}
 		_putchar('\n');
 		line++;
 	}
