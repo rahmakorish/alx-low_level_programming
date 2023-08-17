@@ -11,13 +11,13 @@ void more_numbers(void)
 
 	while (line <= 10)
 	{
-		while (i <= 57 )
+		while (i <= 57)
 		{
 			_putchar(i);
 			i++;
 		};
 		_putchar('\n');
 		line++;
-	} 
+	}
 	/*_putchar('\n');*/
 }
