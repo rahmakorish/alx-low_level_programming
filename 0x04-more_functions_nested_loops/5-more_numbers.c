@@ -6,18 +6,31 @@
  **/
 void more_numbers(void)
 {
-	int i = 0;
+	int i = 48;
+	int x = 48;
 	int count = 0;
 
-	while (count < 10)
+	while (count <= 10)
 	{
-		while (i < 15)
+		while (i < 58)
 		{
-			_putchar("%d", i);
-			i++;
+			if (i == 57)
+			{
+				while (x < 53)
+				{
+					_putchar(49);
+					_putchar(x);
+					x++;
+				};
+			}
+			else
+			{
+			_putchar(i);
+			i++;}
+			/*count++;*/
 		};
-		count++;
 		_putchar('\n');
+		count++;
 	}; 
 	_putchar('\n');
 }
