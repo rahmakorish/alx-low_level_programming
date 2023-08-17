@@ -1,21 +1,24 @@
-#include <time.h>
-#include <stdio.h>
+#include "main.h"
 /**
  *  print_most_numbers-prints the numbers from 0 to 9
  * *Return:0succes
  **/
 void print_most_numbers(void)
 {
-	while (i < 10)
+	int i = 48;
+
+	while (i < 58)
 	{
-		if (i == 2 || i == 4)
+		if (i == 50 || i == 52)
 		{
-		       	break; 
+			i++;
+		       	continue; 
 		}
 		else
 		{
 			_putchar(i);
-		};
+		}
+		i++;
 	}
-	_putchar(' ');
+	_putchar('\n');
 }
