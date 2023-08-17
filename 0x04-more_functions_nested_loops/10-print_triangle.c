@@ -9,14 +9,23 @@ void print_triangle(int size)
 	int symbol = 0;
 	int space = size;
 
-	while (space != 0)
+	if (size <= 0)
 	{
-		_putchar(' ');
-		while ( symbol < size)
-		{
-			_putchar('#');
-			symbol++;
-		};
-		space--;
+		_putchar('\n');
 	}
+	else
+	{
+		while (space >= 0)
+		{
+			_putchar(' ');
+			while ( symbol < size)
+			{
+				_putchar('#');
+				symbol++;
+				/*_putchar('\n');*/
+			};
+			putchar('\n');
+			space--;
+		}
+	};
 }

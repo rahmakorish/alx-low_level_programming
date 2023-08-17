@@ -1,4 +1,3 @@
-#include <time.h>
 #include "main.h"
 /**
  * more_numbers-prints the numbers 10 times
@@ -7,30 +6,18 @@
 void more_numbers(void)
 {
 	int i = 48;
-	int x = 48;
-	int count = 0;
+	/*int x = 48;*/
+	int line = 0;
 
-	while (count <= 10)
+	while (line <= 10)
 	{
-		while (i < 58)
+		while (i <= 57 )
 		{
-			if (i == 57)
-			{
-				while (x < 53)
-				{
-					_putchar(49);
-					_putchar(x);
-					x++;
-				};
-			}
-			else
-			{
 			_putchar(i);
-			i++;}
-			/*count++;*/
+			i++;
 		};
 		_putchar('\n');
-		count++;
-	}; 
-	_putchar('\n');
+		line++;
+	} 
+	/*_putchar('\n');*/
 }
