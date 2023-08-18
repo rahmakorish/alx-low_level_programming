@@ -5,22 +5,22 @@
  **/
 void more_numbers(void)
 {
-	int i = 48;
-	char nums[] = {4948};
+	int i = 0;
 	int line = 0;
 
 	while (line < 10)/*prints 10 lines*/
 	{
-		while (i <= 58)/*print up to 9*/
+		while (i <= 14)/*print up to 9*/
 		{
-			if (i == 58)
-			{ _putchar(nums);}
-			else {
-			_putchar(i);
-			i++;}
+			if (i > 9 && i < 15)
+			{
+				_putchar(49);
+			}
+			_putchar(i + 48);
+			i++;
 		}
 		_putchar('\n');
-		i = 48;
+		i = 0;
 		line++;
 	}
 	/*_putchar('\n');*/
