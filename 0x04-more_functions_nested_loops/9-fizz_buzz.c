@@ -1,9 +1,8 @@
 #include <stdio.h>
-
-/*
-*main-entry point for the program
-*Description: This prints fizzbuzz if number can be divided by 3 and 5
-*Return:0success
+/**
+ *main-entry point for the program
+ *Description: This prints fizzbuzz if number can be divided by 3 and 5
+ *Return:0success
 **/
 int main(void)
 {
