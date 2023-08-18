@@ -3,7 +3,8 @@
 
 /*
 *main-entry point for the program
-*Return:0succes
+*Description: This prints fizzbuzz if number can be divided by 3 and 5
+*Return:0success
 **/
 int main(void)
 {
