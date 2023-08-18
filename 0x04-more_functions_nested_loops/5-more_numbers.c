@@ -9,14 +9,15 @@ void more_numbers(void)
 	/*int x = 48;*/
 	int line = 0;
 
-	while (line <= 10)
+	while (line < 10)/*prints 10 lines*/
 	{
-		while (i <= 57)
+		while (i <= 57)/*print up to 9*/
 		{
 			_putchar(i);
 			i++;
 		}
 		_putchar('\n');
+		i = 48;
 		line++;
 	}
 	/*_putchar('\n');*/
