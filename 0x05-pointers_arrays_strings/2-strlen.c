@@ -4,11 +4,17 @@
  * @s:string input
  * Return:string length
  **/
-int _strlren(char *s)
+int _strlen(char *s)
 {
-	for (int x = 0; x < 10;x++)
+	int count = 0;
+	int i;
 
-	{ 
-		_putchar(x);
-	}
+	for (i = 0 ; i < size0f(s); i++)
+	
+	while (s[i] != '\0')
+	{
+		count++;
+	};
+		return(count);
+	
 }
