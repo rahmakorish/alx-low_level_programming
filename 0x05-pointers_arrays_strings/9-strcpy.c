@@ -18,8 +18,8 @@ char *_strcpy(char *dest, char *src)
 			for (x = 0; x < dest_len + 1; x++)
 			{
 				dest[x] = src[i];
-			};
-		};
+			}
+		}
 	
 	return (dest);
 }
