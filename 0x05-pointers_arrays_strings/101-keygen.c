@@ -14,6 +14,7 @@ int main (void)
 
 	srand((unsigned) time(&t));
 	for (i = 0; i < n; i++)
-		printf("%c", rand());
+	/*	printf("%c", rand());*/
+		putchar(rand());
 	return (0);
 }
