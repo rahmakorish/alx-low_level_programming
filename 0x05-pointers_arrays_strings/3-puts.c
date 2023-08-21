@@ -10,5 +10,8 @@ void _puts(char *str)
 	{
 		_putchar(*str);
 	}
+	else
+	{
 	_putchar('\n');
+	};
 }
