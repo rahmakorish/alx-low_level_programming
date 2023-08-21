@@ -6,8 +6,8 @@
  **/
 void swap_int(int *a, int *b)/** a =10 b =20*/
 {
-	
-	int x = *a ;/* x = 10*/
-	a = b;
-	b = x;	/* b = x =10*/
+	int *x;  ;/* x = 10*/
+	x = b;
+	b = a;
+	a = x;
 }

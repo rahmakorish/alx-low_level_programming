@@ -6,5 +6,9 @@
  **/
 int _strlren(char *s)
 {
-	while (*s != '\n')
+	for (int x = 0; x < 10;x++)
+
 	{ 
+		_putchar(x);
+	}
+}
