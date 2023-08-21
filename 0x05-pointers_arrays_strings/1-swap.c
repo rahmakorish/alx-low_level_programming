@@ -4,9 +4,10 @@
  *@a:first integer
  *@b:second intger
  **/
-void swap_int(int *a, int *b)/** a =10 b =20*/
+void swap_int(int *a, int *b)
 {
-	int x;  ;/* x = 10*/
+	int x;
+
 	x = *b;
 	*b = *a;
 	*a = x;
