@@ -7,14 +7,10 @@
 int _strlen(char *s)
 {
 	int count = 0;
-	int i;
 
-	for (i = 0 ; i < size0f(s); i++)
-	
-	while (s[i] != '\0')
+	while (*s++ != '\0')
 	{
 		count++;
 	};
-		return(count);
-	
+	return (count);
 }
