@@ -5,23 +5,21 @@
  **/
 void more_numbers(void)
 {
-	int i = 0;
-	int line = 0;
+	int i, asci;
+	int line;
 
-	while (line < 10)/*prints 10 lines*/
+	for (line = 1; line <= 10; line++)
 	{
-		while (i <= 14)/*print up to 9*/
+		for (i = 0; i <= 14; i++)
 		{
+			asci = i;
 			if (i > 9 && i < 15)
 			{
 				_putchar(49);
+				asci = i % 10;
 			}
-			_putchar(i + 48);
-			i++;
+			_putchar(asci + 48);
 		}
 		_putchar('\n');
-		i = 0;
-		line++;
 	}
-	/*_putchar('\n');*/
 }
