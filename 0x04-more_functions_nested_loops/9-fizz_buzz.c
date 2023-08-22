@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  *main-entry point for the program
  *Description: This prints fizzbuzz if number can be divided by 3 and 5
