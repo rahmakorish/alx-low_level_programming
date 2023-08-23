@@ -1,5 +1,6 @@
 #include "main.h"
 #include <string.h>
+#include <stdio.h>
 /**
  * _strcmp- compares two strings
  * @s1: first string
@@ -15,22 +16,26 @@ int _strcmp(char *s1, char *s2)
 	for (i = 0; i < lens1 - 1; i++)
 	{ 
 		for (x = 0; x < lens2 - 1; x++)
-		{	if (s1[i] == s2[x])
+	{ 
+		if (s1[i] == s2[i])
 			{
 				diff = 0;
 				continue;
 			}
-			else if (s1[i] > s2[x])
-			{ 
+			else if (s1[i] > s2[i])
+			{
+				printf("s1=%c s2=%c\n",s1[i],s2[x]);
 				diff = s1[i] - s2[x];
+				break;
 			}
 			else
 			{
 				diff = -(s2[x] - s1[i]);
 			}
-		}}
-		return (diff);
-	
+		
+	};
+	}
+	return (diff);
 }
 
 /**	if (lens1 > lens2)
