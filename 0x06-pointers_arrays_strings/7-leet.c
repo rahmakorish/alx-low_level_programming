@@ -19,6 +19,22 @@ char *leet(char *a)
 		else if (a[i] == 69 || a[i] == 101)
 		{
 			a[i] = 51;
+		}
+		else if (a[i] == 79 || a[i] == 111)
+		{
+			a[i] = 48;
+		}
+		else if (a[i] == 84 || a[i] == 116)
+		{
+			a[i] = 55;
+		}
+		else if (a[i] == 76 || a[i] == 108)
+		{
+			a[i] = 49;
+		}
+		else
+		{
+			continue;
 		};
 	}
 	return (a);
