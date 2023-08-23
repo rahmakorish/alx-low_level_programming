@@ -8,11 +8,32 @@
  **/
 int _strcmp(char *s1, char *s2)
 {
-	int diff;
-	int lens1 = strlen(s1);
+	int diff, i, x;
+       	int lens1 = strlen(s1);
 	int lens2 = strlen(s2);
 
-	if (lens1 > lens2)
+	for (i = 0; i < lens1 - 1; i++)
+	{ 
+		for (x = 0; x < lens2 - 1; x++)
+		{	if (s1[i] == s2[x])
+			{
+				diff = 0;
+				continue;
+			}
+			else if (s1[i] > s2[x])
+			{ 
+				diff = s1[i] - s2[x];
+			}
+			else
+			{
+				diff = -(s2[x] - s1[i]);
+			}
+		}}
+		return (diff);
+	
+}
+
+/**	if (lens1 > lens2)
 	{
 		diff = lens1 + lens2;
 		return (diff);
@@ -28,4 +49,4 @@ int _strcmp(char *s1, char *s2)
 		return (diff);
 	}
 	return (0);
-}
+}**/
