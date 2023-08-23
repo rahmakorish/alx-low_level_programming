@@ -12,13 +12,13 @@ char *cap_string(char *s)
 
 	for (i = 0; i < length; i++)
 	{
-		if (121 > s[i] && 96 < s[i])
+		if (121 > s[i] && 96 < s[i] && s[i - 1] == ' ')
 		{
 			s[i] = s[i] - 32;
 		}
 		else
 		{
-			s[i] = s[i];
+			continue;
 		}
 	}
 	return (s);
