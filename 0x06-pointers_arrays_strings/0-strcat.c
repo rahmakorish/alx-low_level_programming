@@ -4,6 +4,7 @@
  * _strcat- appends the 2nd string to the 1st string
  * @dest: string to append to
  * @src: string appended
+ * Return:pointer to the resulting string dest
  **/
 char *_strcat(char *dest, char *src)
 {
@@ -15,10 +16,10 @@ char *_strcat(char *dest, char *src)
 	{
 		if (dest[nullindex]  == '\0')
 		{
-			/**dest[nullindex] += src;**/
-			for (srcindex = 0; srcindex < srclen && src[srcindex] != '\0';srcindex++)
-				dest[destlen + srcindex] = src [srcindex];
-			dest[destlen + srcindex] = '\0';
+			for (srcindex = 0; srcindex < srclen && src[srcindex] != '\0'; srcindex++)
+				dest[destlen + srcindex] = src[srcindex];
+				dest[destlen + srcindex] = '\0';
+
 		}
 	}
 	return (dest);
