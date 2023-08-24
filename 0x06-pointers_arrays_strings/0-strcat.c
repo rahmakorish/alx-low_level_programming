@@ -8,27 +8,18 @@
  **/
 char *_strcat(char *dest, char *src)
 {
+	
 	int nullindex, srcindex;
 	int destlen = strlen(dest);
-	int srclen = strlen(src);
 
 	for (nullindex = 0; nullindex < destlen; nullindex++)
 	{
 		if (dest[nullindex]  == '\0') 
 		{
-			for (srcindex = 0; srcindex < srclen/* && src[srcindex] != '\0'*/; srcindex++)
+			for (srcindex = 0;src[srcindex]; srcindex++)
 			{
-				if (src[srcindex] == '\0')
-				{
-					dest[nullindex + srcindex] == '\0';
-				}
-				else
-				{
-				dest[nullindex + srcindex] = src[srcindex];
-				}				
+				dest[nullindex++] = src[srcindex];	
 			}
-				/*	dest[destlen + srcindex] = src[srcindex];
-				dest[destlen + srcindex] = '\0';*/
 		}
 	}
 	return (dest);
