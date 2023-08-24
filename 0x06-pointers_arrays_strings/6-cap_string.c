@@ -9,11 +9,12 @@ char *cap_string(char *s)
 {
 	int i;
 	int length = strlen(s);
-	char separators [] = ", ; . ! ? \" ( ) \{\ }";
+/*	char separators [] = {',', ';', '.', '!', '?', '"', '(', ')','{', '}'";*/
 
+	
 	for (i = 0; i < length; i++)
-	{
-		if (121 > s[i] && 96 < s[i] && s[i - 1] == separators)
+	{	
+		if (121 > s[i] && 96 < s[i] && s[i - 1] == ' ')
 		{
 			s[i] = s[i] - 32;
 		}
