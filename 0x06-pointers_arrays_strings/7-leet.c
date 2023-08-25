@@ -13,17 +13,13 @@ char *leet(char *a)
 	char upper[5] = {'A', 'E', 'O', 'T', 'L'};
 	char nums[5] = {'4', '3', '0', '7', '1'};
 
-	for (x = 0; i < 5; x++)
+	for (x = 0; x < 5; x++)
 	{
 		for (i = 0 ; i < length; i++)
 		{
 			if (a[i] == upper[x] || a[i] == lower[x])
 			{
 				a[i] = nums[x];
-			}
-			else
-			{
-				continue;
 			};
 		}
 	}
