@@ -7,35 +7,25 @@
  **/
 char *leet(char *a)
 {
-	int i;
+	int i, x;
 	int length = strlen(a);
+	char lower[5] = {'a', 'e', 'o', 't', 'l'};
+	char upper[5] = {'A', 'E', 'O', 'T', 'L'};
+	char nums[5] = {'4', '3', '0', '7', '1'};
 
-	for (i = 0 ; i < length; i++)
+	for (x = 0; i < 5; x++)
 	{
-		if (a[i] == 65 || a[i] == 97)
+		for (i = 0 ; i < length; i++)
 		{
-			a[i] = 52;
+			if (a[i] == upper[x] || a[i] == lower[x])
+			{
+				a[i] = nums[x];
+			}
+			else
+			{
+				continue;
+			};
 		}
-		else if (a[i] == 69 || a[i] == 101)
-		{
-			a[i] = 51;
-		}
-		else if (a[i] == 79 || a[i] == 111)
-		{
-			a[i] = 48;
-		}
-		else if (a[i] == 84 || a[i] == 116)
-		{
-			a[i] = 55;
-		}
-		else if (a[i] == 76 || a[i] == 108)
-		{
-			a[i] = 49;
-		}
-		else
-		{
-			continue;
-		};
 	}
 	return (a);
 	_putchar('\n');
