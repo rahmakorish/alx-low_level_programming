@@ -9,6 +9,15 @@
  **/
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	dest[n] = src[n];
+	/* memcpy ( from location buffer 0+50, from buffer2 , take 10 places)*/
+	unsigned int i;
+
+	i = 0;
+	while (i < n)
+	{
+		dest[i] = src[n];
+		n--;
+		i++;
+	}
 	return (dest);
 }
