@@ -3,9 +3,9 @@
 /**
  * _memcpy - copies memory area
  * @dest : memory set to paste
- * @n : number of bytes 
- * @src : memory area to copy from 
- * Return : pointer to dest
+ * @n : number of bytes
+ * @src : memory area to copy from
+ * Return: pointer to dest
  **/
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
