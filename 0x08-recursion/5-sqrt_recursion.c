@@ -8,5 +8,12 @@ int _sqrt_recursion(int n)
 {
 	int root = 1;
 
-	return (root);
+	if (root * root == n)
+	{
+		return (root);
+	}
+	else
+	{
+		return (-1);
+	}
 }
