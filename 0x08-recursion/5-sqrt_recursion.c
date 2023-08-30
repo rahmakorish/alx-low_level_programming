@@ -1,15 +1,10 @@
 #include "main.h"
 /**
  * _sqrt_recursion-returns the square root of a number
+ * @root: number back
  * @n: number to get square root
  * Return: square root of number n
  */
-/*
- *get_square- gets the square root of num
- *@n: number to check
- *@root:output num
- *Return:root of n
- **/
 int get_square(int n, int root);
 int _sqrt_recursion(int n)
 {
@@ -17,6 +12,12 @@ int _sqrt_recursion(int n)
 
 	return (rootfinal);
 }
+/**
+ *get_square-gets the square root of num
+ *@n: number to check
+ *@root: output num
+ *Return: root of n
+ **/
 int get_square(int n, int root)
 {
 	if (root * root == n)
