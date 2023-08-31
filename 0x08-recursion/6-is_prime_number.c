@@ -2,6 +2,7 @@
 /**
  * is_prime_number- return 1 for prime number
  * @n:number to check
+ * @ch:second number
  * Return: 1 if prime and o if otherwise
  **/
 
@@ -13,10 +14,10 @@ int is_prime_number(int n)
 	return (check);
 }
 /**
- * check_prime: checks if num is prime by taking the number and num next to ir
+ * check_prime-checks if num is prime by taking the number and num next to ir
  *@n:number checked
- *@ch:checker number to compare
- * Return: 1 if prime
+ *@ch:second parameter
+ *Return: 1 if prime
  **/
 int check_prime(int n, int ch)
 {
