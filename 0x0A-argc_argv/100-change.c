@@ -13,15 +13,16 @@ int main(int argc, char *argv[])
 {
 	int cents[] = {25,10,5,2,1};
 	int i, output;
+	int input =atoi(argv[1]);
 
 	if (argc == 1)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	else if (argc ==2)
+	else if (argc == 2)
 	{
-		if(atoi(argv[1]) < 0)
+		if(input < 0)
 		{
 			printf("0\n");
 		} 
@@ -29,15 +30,16 @@ int main(int argc, char *argv[])
 		{
 			for(i = 0; i < 4; i++)
 		{
-			if(atoi(argv[1])%cents[i] == 0)
+			if(input % cents[i] == 0)
 			{	
-				output= atoi(argv[1]) / cents[i];
+				output = input / cents[i];
 				printf("%d\n",output);
 				break;
-			}
-			else 
+			};
+			if(input % cents[i] > 0) 
 			{
-				output = atoi(argv[1])% cents[i];
+				input = input - cents[i];
+				output = (input % cents[i]) + (input / cents[i]) +1;
 				printf("%d\n",output);
 				break;
 				}
