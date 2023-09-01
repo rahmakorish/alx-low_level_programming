@@ -11,9 +11,9 @@
  **/
 int main(int argc, char *argv[])
 {
-	int cents[] = {25,10,5,2,1};
+	int cents[] = {25, 10, 5, 2, 1};
 	int i, output;
-	int input =atoi(argv[1]);
+	int input = atoi(argv[1]);
 
 	if (argc == 1)
 	{
@@ -22,29 +22,29 @@ int main(int argc, char *argv[])
 	}
 	else if (argc == 2)
 	{
-		if(input < 0)
+		if (input < 0)
 		{
 			printf("0\n");
-		} 
+		}
 		else
 		{
-			for(i = 0; i < 4; i++)
+			for (i = 0; i < 4; i++)
 		{
-			if(input % cents[i] == 0)
-			{	
+			if (input % cents[i] == 0)
+			{
 				output = input / cents[i];
-				printf("%d\n",output);
+				printf("%d\n", output);
 				break;
 			};
-			if(input % cents[i] > 0) 
+			if (input % cents[i] > 0)
 			{
 				input = input - cents[i];
-				output = (input % cents[i]) + (input / cents[i]) +1;
-				printf("%d\n",output);
+				output = (input % cents[i]) + (input / cents[i]) + 1;
+				printf("%d\n", output);
 				break;
 				}
 		}
 		}
 	}
-	return(0);
+	return (0);
 }
