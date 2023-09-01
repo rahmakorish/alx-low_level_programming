@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 #include <string.h>
 /**
  *  * _strcat- appends the 2nd string to the 1st string
