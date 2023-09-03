@@ -19,7 +19,7 @@ int __attribute__ ((unused)) main(int argc, char *argv[])
 	}
 	else
 	{
-	for (i = 1; i < argc; i++)
+		for (i = 1; i < argc; i++)
 	{
 		num = atoi(argv[i]);
 		if (!isdigit(num))
