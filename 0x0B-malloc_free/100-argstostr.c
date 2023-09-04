@@ -21,9 +21,11 @@ char *argstostr(int ac, char **av)
 	}
 	else
 	{
-		for(i = 0; i > ac; i++)
+		for(i = 0; i < ac; i++)
 		{
-		printf("%s\n",av[i]);
+		/*printf("%s\n",av[i]);*/
+		_putchar(av[i]);
+		_putchar('\n');
 	
 		}
 	}
