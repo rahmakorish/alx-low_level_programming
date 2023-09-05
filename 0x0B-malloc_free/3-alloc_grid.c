@@ -1,7 +1,6 @@
 #include "main.h"
 #include <string.h>
 #include <stdlib.h>
-#include <stdio.h>
 /**
  * alloc_grid - return pointer to 2 dimensional array
  * @width: first index of arraay
@@ -11,16 +10,25 @@
 int **alloc_grid(int width, int height)
 {
 	int **pe;
+	int raw_index = 0;
 
 	if (width == 0 || height == 0)
-	{ return (NULL);}
-	/* size of internal array (width)*/
-	/* size of external array(height)*/
-	pe = malloc((width * sizeof(int))* height);
+	{
+		return (NULL);
+	}
+
+	pe = malloc(height * sizeof(int));
 	if (pe == NULL)
-	{ return NULL;}
-	/*pi = malloc(height * sizeof(int));*/
-	printf("pe: %d\n",**pe);
-	/*printf("pi: %d\n",**pi);*/
-	return(0);
+	{
+		return (NULL);
+	}
+	else
+	{
+		while (raw_index < height)
+		{
+			pe[raw_index] = malloc(width * sizeof(int));
+			raw_index++;
+		}
+	}
+	return (pe);
 }
