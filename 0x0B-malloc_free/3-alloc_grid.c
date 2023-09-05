@@ -10,7 +10,7 @@
 int **alloc_grid(int width, int height)
 {
 	int **pe;
-	int raw_index = 0;
+	int raw_index = 0, height_index, i;
 
 	if (width == 0 || height == 0)
 	{
@@ -29,6 +29,11 @@ int **alloc_grid(int width, int height)
 			pe[raw_index] = malloc(width * sizeof(int));
 			raw_index++;
 		}
+		return (pe);
 	}
-	return (pe);
+	for (i = 0, height_index = 0; i < width && height_index < height; i++, height_index++)
+	{
+		pe[height_index][i]= 0;
+	};
+ free(pe);
 }
