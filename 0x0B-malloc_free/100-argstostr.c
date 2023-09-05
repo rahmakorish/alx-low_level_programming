@@ -5,7 +5,7 @@
  * argstostr - concatenates argumentd of program
  * @ac: first integer
  * @av: pointer
- * Return : pointer to new string
+ * Return: pointer to new string
  **/
 char *argstostr(int ac, char **av)
 {
@@ -13,18 +13,21 @@ char *argstostr(int ac, char **av)
 	int i;
 
 	if (ac == 0 || av == NULL)
-	{return (NULL);}
-	p = malloc(ac * sizeof(char));
+	{
+		return (NULL);
+	}
+	p = malloc(ac * sizeof(char) + (ac * sizeof(char)));
 	if (p == NULL)
 	{
 		return (NULL);
 	}
 	else
 	{
-		for(i = 0; i < ac; i++)
+
+		for (i = 0; i < ac; i++)
 		{
-		printf("%s\n",av[i]);
+		printf("%s\n", av[i]);
 		}
 	}
-	return(p);
+	return (p);
 }
