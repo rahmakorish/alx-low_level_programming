@@ -12,28 +12,28 @@ int **alloc_grid(int width, int height)
 	int **pe;
 	int raw_index = 0, h, i;
 
-	if (width == 0 || height == 0)
+	pe = malloc(height * sizeof(int));
+	if (width == 0 || height == 0 || pe == NULL)
 	{
 		return (NULL);
 	}
 	else
 	{
-		pe = malloc(height * sizeof(int));
 		while (raw_index < height)
 		{
-			pe[raw_index] = malloc(width * sizeof(int));
+			pe[raw_index] = malloc(width * sizeof(**pe));
 			raw_index++;
+			if (pe[raw_index] == 0)
+			{
+				while(raw_index--)
+					free(pe[raw_index]);
+				free(pe);
+				return (NULL);
+			}
+			for (i = 0, h = 0; i < width && h < height; i++, h++)
+			
+				pe[h][i]= 0;
 		}
-		if (pe[raw_index] == 0)
-		{
-			free(pe[raw_index]);
-			free(pe);
-			return (NULL);
-		}
-	};
-	for (i = 0, h = 0; i < width && h < height; i++, h++)
-	{
-		pe[h][i]= 0;
-	};
+	}
 	return(pe);
 }
