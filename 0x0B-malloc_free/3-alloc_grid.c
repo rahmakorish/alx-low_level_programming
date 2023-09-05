@@ -25,15 +25,16 @@ int **alloc_grid(int width, int height)
 			raw_index++;
 			if (pe[raw_index] == NULL)
 			{
-				
-				free(pe[raw_index]);
+				while (raw_index--)
+				{
+					free(pe[raw_index]);
+				}
 				free(pe);
 				return (NULL);
 			}
 			for (i = 0, h = 0; i < width && h < height; i++, h++)
 				pe[h][i] = 0;
 		}
-	
 	return (pe);
 	}
 }
