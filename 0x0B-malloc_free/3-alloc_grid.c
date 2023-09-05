@@ -21,19 +21,19 @@ int **alloc_grid(int width, int height)
 	{
 		while (raw_index < height)
 		{
-			pe[raw_index] = malloc(width * sizeof(**pe));
+			pe[raw_index] = malloc(width * sizeof(int));
 			raw_index++;
-			if (pe[raw_index] == 0)
+			if (pe[raw_index] == NULL)
 			{
-				while(raw_index--)
-					free(pe[raw_index]);
+				
+				free(pe[raw_index]);
 				free(pe);
 				return (NULL);
 			}
 			for (i = 0, h = 0; i < width && h < height; i++, h++)
-			
-				pe[h][i]= 0;
+				pe[h][i] = 0;
 		}
+	
+	return (pe);
 	}
-	return(pe);
 }
