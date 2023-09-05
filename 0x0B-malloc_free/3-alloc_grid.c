@@ -24,12 +24,13 @@ int **alloc_grid(int width, int height)
 			pe[raw_index] = malloc(width * sizeof(int));
 			raw_index++;
 		}
-		if (pe == NULL)
+		if (pe[raw_index] == 0)
 		{
+			free(pe[raw_index]);
 			free(pe);
 			return (NULL);
 		}
-	}
+	};
 	for (i = 0, h = 0; i < width && h < height; i++, h++)
 	{
 		pe[h][i]= 0;
