@@ -10,15 +10,17 @@
  **/
 int **alloc_grid(int width, int height)
 {
-	int **pi, **pe;
+	int **pe;
 
 	if (width == 0 || height == 0)
 	{ return (NULL);}
 	/* size of internal array (width)*/
 	/* size of external array(height)*/
-	pe =malloc(width * sizeof(int));
-	pi = malloc(height * sizeof(int));
+	pe = malloc((width * sizeof(int))* height);
+	if (pe == NULL)
+	{ return NULL;}
+	/*pi = malloc(height * sizeof(int));*/
 	printf("pe: %d\n",**pe);
-	printf("pi: %d\n",**pi);
+	/*printf("pi: %d\n",**pi);*/
 	return(0);
 }

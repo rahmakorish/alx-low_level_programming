@@ -19,6 +19,11 @@ char *str_concat(char *s1, char *s2)
 	}
 	else
 	{
+		if(s2 == NULL)
+		{ s2 = " ";}
+		else if(s1 == NULL)
+		{s1 =" ";}
+
 		while (i1 < size1)
 		{
 			p[i1] = s1[i1];
