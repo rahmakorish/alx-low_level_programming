@@ -21,7 +21,7 @@ int **alloc_grid(int width, int height)
 	{
 		while (raw_index < height)
 		{
-			pe[raw_index] = malloc(width * sizeof(int));
+			pe[raw_index] = malloc(width * sizeof(**pe));
 			raw_index++;
 			if (pe[raw_index] == NULL)
 			{
