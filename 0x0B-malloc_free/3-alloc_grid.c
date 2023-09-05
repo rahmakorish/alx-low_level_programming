@@ -28,12 +28,12 @@ int **alloc_grid(int width, int height)
 		{
 			pe[raw_index] = malloc(width * sizeof(int));
 			raw_index++;
-		}
+		} return(pe);
 	}
 	for (i = 0, h = 0; i < width && h < height; i++, h++)
 	{
 		pe[h][i]= 0;
 	};
-	return(pe);
- 	free(pe);
+	free(pe);
+	return(0);
 }
