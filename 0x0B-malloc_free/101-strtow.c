@@ -26,8 +26,10 @@ char **strtow(char *str)
 		for (i = 0; i < len; i++)
 		{
 			while (str[i]--)
+			*p[i] = str[i];
+			return(p); 
+			printf("%d",*p[i]); }
 
-			printf("%d",str[i]); }
 
 	}
 return(0);
