@@ -10,7 +10,7 @@
 char **strtow(char *str)
 {
 	char **p;
-	unsigned len = strlen(str) + 1, i;
+	unsigned int len = strlen(str) + 1, i;
 
 	if (str == NULL)
 	{
@@ -19,18 +19,22 @@ char **strtow(char *str)
 	/*allocate array*/
 	p = malloc(len * sizeof(char));
 	if (p == NULL)
-	{ free(p); return(NULL);}
+	{
+		free(p); 
+		return(NULL);
+	}
 	else
 	{
 		/*allocate array items */
 		for (i = 0; i < len; i++)
 		{
 			while (str[i]--)
-			*p[i] = str[i];
-			return(p); 
-			printf("%d",*p[i]); }
-
-
+			{
+				*p[i] = str[i];
+			}
+			return(p);
+			printf("%d",*p[i]);
+		}
 	}
 return(0);
 }
