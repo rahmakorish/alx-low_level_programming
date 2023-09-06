@@ -20,8 +20,8 @@ char **strtow(char *str)
 	p = malloc(len * sizeof(char));
 	if (p == NULL)
 	{
-		free(p); 
-		return(NULL);
+		free(p);
+		return (NULL);
 	}
 	else
 	{
@@ -32,9 +32,8 @@ char **strtow(char *str)
 			{
 				*p[i] = str[i];
 			}
-			return(p);
-			printf("%d",*p[i]);
+			return (p);
 		}
 	}
-return(0);
+return (0);
 }
