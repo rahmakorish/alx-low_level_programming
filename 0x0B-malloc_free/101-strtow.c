@@ -9,22 +9,25 @@
  */
 char **strtow(char *str)
 {
-	char *p;
-	unsigned len = strlen(str) + 1,i;
+	char **p;
+	unsigned len = strlen(str) + 1, i;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
+	/*allocate array*/
 	p = malloc(len * sizeof(char));
 	if (p == NULL)
 	{ free(p); return(NULL);}
 	else
 	{
+		/*allocate array items */
 		for (i = 0; i < len; i++)
 		{
-			if(&str[i] == "\n")
-			printf("%c",str[i]); }
+			while (str[i]--)
+
+			printf("%d",str[i]); }
 
 	}
 return(0);
