@@ -28,9 +28,11 @@ char **strtow(char *str)
 		/*allocate array items */
 		for (i = 0; i < len; i++)
 		{
-			p = malloc(i * sizeof(char));
+			p = malloc(i* len * sizeof(char));
 			while (str[i]--)
-			{*p[i] = str[i];}
+			{
+				*p[i] = str[i];
+			}
 			return (p);
 		}
 	}
