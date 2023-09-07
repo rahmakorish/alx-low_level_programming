@@ -3,6 +3,7 @@
 /**
  *malloc_checked-allocate memory using malloc
  *@b:size required
+ *Return: pointer to memory
  **/
 void *malloc_checked(unsigned int b)
 {
