@@ -6,7 +6,7 @@
  *@s1:first string
  *@s2:second string
  *@n:start point in s2
- *Retrun:pointer to new concatanated string
+ *Return:pointer to new concatanated string
  **/
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
