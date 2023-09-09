@@ -41,8 +41,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			x++;
 		};
 		p[len1 + n + 1] = '\0';
-		
+		return (p);
 	}
-	return (p);
+	free(p);
 	exit(98);
 }
