@@ -1,3 +1,7 @@
+#ifndef MAIN_H
+#define MAIN_H
+#include <stdio.h>
+
 /**
  *struct dog-first struct
  *@name:dog's name
@@ -10,3 +14,4 @@ struct dog
 	float age;
 	char *owner;
 };
+#endif
