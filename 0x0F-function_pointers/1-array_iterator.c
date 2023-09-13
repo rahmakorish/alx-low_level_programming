@@ -11,8 +11,10 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	unsigned int i = 0;
 
-	if(array == NULL || size == 0)
-	{	exit(98);}
+	if (array == NULL || size == 0)
+	{
+		exit(98);
+	}
 
 	while (i < size)
 	{
