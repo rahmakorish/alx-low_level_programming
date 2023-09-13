@@ -8,4 +8,6 @@
  **/
 int op_add(int a, int b)
 {
+	int sum = atoi(a) + atoi(b);
+	return (sum);
 }
