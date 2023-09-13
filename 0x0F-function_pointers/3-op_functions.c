@@ -10,6 +10,7 @@
 int op_add(int a, int b)
 {
 	int sum = atoi(a) + atoi(b);
+
 	return (sum);
 }
 /**
@@ -21,6 +22,7 @@ int op_add(int a, int b)
 int op_sub(int a, int b)
 {
 	int sub = atoi(a) - atoi(b);
+
 	return (sub);
 }
 /**
@@ -32,6 +34,7 @@ int op_sub(int a, int b)
 int op_mul(int a, int b)
 {
 	int mul = atoi(a) * atoi(b);
+
 	return (mul);
 }
 /**
@@ -50,6 +53,7 @@ int op_div(int a, int b)
 	else
 	{
 	int div = atoi(a) / atoi(b);
+
 	return (div);
 	}
 }
@@ -67,5 +71,6 @@ int op_mod(int a, int b)
 		return (0);
 	}
 	int mod = atoi(a) % atoi(b);
+
 	return (mod);
 }
