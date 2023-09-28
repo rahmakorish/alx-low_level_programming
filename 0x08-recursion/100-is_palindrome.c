@@ -7,17 +7,23 @@
  **/
 int is_palindrome(char *s)
 {
-	int i = 0;
 	unsigned int len = strlen(s) - 1;
 
 	if (len % 2 == 0)
 	{
 		int middle = len / 2;
-	if (s[middle] == s[middle-1])
+	if (s[middle] == s[middle - 1])
 	{
 		return (1);
-	}};
-	(void) i ;
-	return(0);
-
+	}
+	else if (s[middle - 1] == s[middle + 1])
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+	};
+	return (0);
 }
