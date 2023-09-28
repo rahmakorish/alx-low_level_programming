@@ -12,7 +12,7 @@ int is_palindrome(char *s)
 	if (len % 2 == 0)
 	{
 		int middle = len / 2;
-	if (s[middle] == s[middle + 1])
+	if (s[middle] == s[middle - 1])
 	{
 		return (1);
 	}
