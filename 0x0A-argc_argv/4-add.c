@@ -21,18 +21,13 @@ int __attribute__ ((unused)) main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 	{
+	
+		{
 		num = atoi(argv[i]);
-		if (!isdigit(num))
-		{
-			printf("Error\n");
-			break;
-		}
-		else if (isdigit(num))
-		{
-			sum += num;
-			printf("%d\n", sum);
+		sum += num;
 		}
 	}
+	printf("%d\n", sum);
 	}
 	return (0);
 }
