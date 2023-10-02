@@ -21,11 +21,8 @@ int __attribute__ ((unused)) main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 	{
-	
-		{
 		num = atoi(argv[i]);
 		sum += num;
-		}
 	}
 	printf("%d\n", sum);
 	}
