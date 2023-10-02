@@ -11,7 +11,8 @@
  **/
 int main(int argc, char *argv[])
 {
-
+	int cents[] = {25, 10, 5, 2, 1};
+	int i, output;
 	int input;
 
 	if (argc == 1)
@@ -28,7 +29,16 @@ int main(int argc, char *argv[])
 		}
 		else
 		{
-			printf("%d\n", input);
+			for (i = 0; i < 4; i++)
+		{
+			if (input % cents[i] == 0)
+			{
+				output = input / cents[i];
+				printf("%d\n", output);
+				break;
+			}
+		}
+			/*printf("%d\n", input);*/
 		}
 	}
 	return (0);
