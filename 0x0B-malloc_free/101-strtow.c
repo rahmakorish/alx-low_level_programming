@@ -29,9 +29,10 @@ char **strtow(char *str)
 		for (i = 0; i < len; i++)
 		{
 			p = malloc(i* len * sizeof(char));
-			while (str[i]--)
+			while (str[i] != '\0')
 			{
 				*p[i] = str[i];
+				i++;
 			}
 			return (p);
 		}
