@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 /**
  *_strdup-copy string and return pointer
@@ -7,7 +8,7 @@
  **/
 char *_strdup(char *str)
 {
-	int i = 0, len = 0;
+	int i = 0, len = 1;
 	char *p;
 
 	if (str == NULL)
@@ -21,7 +22,7 @@ char *_strdup(char *str)
 		len++;
 		str++;
 	}
-	p = malloc(sizeof(char) * len + 1);
+	p = malloc(sizeof(char) * len);
 	if (p == NULL)
 	{
 		return (NULL);
@@ -34,7 +35,7 @@ char *_strdup(char *str)
 			i++;
 		}
 		p[len + 1] = '\0';
-		return (p);
 	}
 	}
+	return (p);
 }
