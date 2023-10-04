@@ -14,11 +14,11 @@ char *str_concat(char *s1, char *s2)
 	char *cat, *tmp1 = s1, *tmp2 = s2;
 
 	if (s1 == NULL)
-	{s1 = "\0";
+	{s1 = "";
 	}
 	len1 = strlen(s1);
 	if (s2 == NULL)
-	{s2 = "\0";
+	{s2 = "";
 	}
 	len2 = strlen(s2);
 	cat = malloc(sizeof(char) * (len1 + len2 + 1));
