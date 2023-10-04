@@ -16,14 +16,15 @@ char *argstostr(int ac, char **av)
 	{
 		return (NULL);
 	}
-	p = malloc(sizeof(av)*ac);
+	p = malloc(sizeof(*av)*ac);
 	if (p == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i <= ac; i++)
+	for (i = 0; i <= ac; i+=2)
 	{
-		printf("%s\n",av[i]);
+		p[i] = *av[i];
+		p[i+1] = '\n';
 	}
 	return (p);
 }
