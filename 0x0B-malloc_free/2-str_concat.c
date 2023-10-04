@@ -8,28 +8,9 @@
  * @s2: second string
  * Return: pointer to allocated string
  **/
-char *newstr(char *s1,int len1, char *s2, int len2)
-{
-	int i= 0, x= 0;
-	char *str = '\0';
-
-	while(i <= len1)
-	{
-		str[i] = s1[i];
-		i++;
-	}
-	while(x <= len2)
-	{
-		str[len1 + x] = s2[x];
-		x++;
-	}
-	str[len1 + len2] = '\0';
-	return (str);
-
-}
 char *str_concat(char *s1, char *s2)
 {
-	int len1 = 0, len2 = 0;
+	int len1 = 0, len2 = 0, i = 0, x = 0;
 	char *cat, *tmp1 = s1, *tmp2 = s2;
 
 	while (*s1 != '\0')
@@ -49,8 +30,17 @@ char *str_concat(char *s1, char *s2)
 	}
 	else
 	{
-		cat = newstr(tmp1, len1, tmp2, len2);
-		printf("%s\n",cat);
+		while (i <= len1)
+	{
+		cat[i] = tmp1[i];
+		i++;
+	}
+	while (x <= len2)
+	{
+		cat[len1 + x] = tmp2[x];
+		x++;
+	}
+		cat[len1 + len2] = '\0';
 	}
 	return (cat);
 }
