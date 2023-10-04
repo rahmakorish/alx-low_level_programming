@@ -23,14 +23,14 @@ char *newstr(char *s1,int len1, char *s2, int len2)
 		str[len1 + x] = s2[x];
 		x++;
 	}
-	str[len1 + len2 + 1] = '\0';
+	str[len1 + len2] = '\0';
 	return (str);
 
 }
 char *str_concat(char *s1, char *s2)
 {
 	int len1 = 0, len2 = 0;
-	char *cat;
+	char *cat, *tmp1 = s1, *tmp2 = s2;
 
 	while (*s1 != '\0')
 	{
@@ -49,7 +49,8 @@ char *str_concat(char *s1, char *s2)
 	}
 	else
 	{
-		cat = newstr(s1, len1, s2, len2);
+		cat = newstr(tmp1, len1, tmp2, len2);
+		printf("%s\n",cat);
 	}
 	return (cat);
 }
