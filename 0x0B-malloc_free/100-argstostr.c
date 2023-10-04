@@ -19,11 +19,6 @@ char *argstostr(int ac, char **av)
 	}
 	/*allocate space for total argument*/
 	/*allocate space for every argument itself*/
-	p = malloc((sizeof(*av) * ac));
-	if (p == NULL)
-	{
-		return (NULL);
-	}
 	for (i = 0; i < ac; i++)
 	{
 	while(*av[ac] != '\0')
@@ -31,7 +26,7 @@ char *argstostr(int ac, char **av)
 		wordlen++;
 		av[ac]++;
 	}
-		av[ac] = malloc(sizeof(char)*wordlen);
+		p = malloc(sizeof(char)*wordlen*ac);
 		for (x = 0; x < wordlen; x++)
 		{
 			av[ac][x] = tmp[ac][x];
