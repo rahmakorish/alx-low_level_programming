@@ -9,21 +9,33 @@
  **/
 char *argstostr(int ac, char **av)
 {
-	char *p;
-	int i;
+	/* ac = argument count , av =srgument vector*/
+	char *p, **tmp = av;
+	int wordlen = 0,i, x;
 
 	if (ac == 0 || av == NULL)
 	{
 		return (NULL);
 	}
-	p = malloc((sizeof(*av) * ac)+51);
+	/*allocate space for total argument*/
+	/*allocate space for every argument itself*/
+	p = malloc((sizeof(*av) * ac));
 	if (p == NULL)
 	{
 		return (NULL);
 	}
 	for (i = 0; i < ac; i++)
 	{
-		p[i] = *av[i];
+	while(*av[ac] != '\0')
+	{
+		wordlen++;
+		av[ac]++;
+	}
+		av[ac] = malloc(sizeof(char)*wordlen);
+		for (x = 0; x < wordlen; x++)
+		{
+			av[ac][x] = tmp[ac][x];
+		}
 	}
 	return (p);
 }
