@@ -12,7 +12,8 @@ int *array_range(int min, int max)
 	int count = 0, i = min, x, n;
 
 	if (min > max)
-	return (NULL);
+	{return (NULL);
+	}
 	while (i <= max)
 	{
 		count++;
