@@ -9,7 +9,7 @@
 int *array_range(int min, int max)
 {
 	int *arr;
-	int count = 0,i = min,x;
+	int count = 0, i = min, x, n;
 
 	if (min > max)
 	return (NULL);
@@ -24,8 +24,14 @@ int *array_range(int min, int max)
 	return (NULL);
 	}
 	else
-	{for (x = 0; x <= count; x++)
-		arr[x] = min;
+	{
+		for (n = min; n <= max; n++)
+		{
+		for (x = 0; x <= count; x++)
+		{arr[x] = n;
+		n++;
+		}
+		}
 	}
 	return (arr);
 }
