@@ -1,10 +1,9 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- *_realloc-reallocates memory block
+ *callo-allocates memory block
  *@ptr:pointer to previous memory
- *@old_size:space of ptr
- *@new_size:new size of the new memory allocated
+ *@size:space of ptr
  *Return:0success
  **/
 void *callo(char *ptr, unsigned int size)
@@ -16,6 +15,13 @@ void *callo(char *ptr, unsigned int size)
 	}
 	return (ptr);
 }
+/**
+ *_realloc-reallocates memory block
+ *@ptr:pointer to previous memory
+ *@old_size:space of ptr
+ *@new_size:new size of the new memory allocated
+ *Return:0success
+ **/
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	if (new_size > old_size)
