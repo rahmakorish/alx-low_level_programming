@@ -3,18 +3,22 @@
 #include <stdlib.h>
 /**
  * new_dog-creates a new dog
- * @name:string 
+ * @name:string
  * @age:number
  * @owner:name
  * Return:new object
  **/
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	struct dog_t dogt;
+	dog_t *dogt;
 
+	dogt = malloc(sizeof(dog_t));
+	if (dogt == NULL)
+	{free(dogt);
+	return (NULL);
+	}
 	dogt->name = name;
 	dogt->age = age;
 	dogt->owner = owner;
-	return(0);
+	return (dogt);
 }
-
