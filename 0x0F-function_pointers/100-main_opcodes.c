@@ -34,5 +34,6 @@ int main(int argc, char *argv[])
 		printf("%02x", list[i]);
 	}
 	printf("\n");
+	free(list);
 	return (0);
 }
