@@ -1,6 +1,7 @@
 #include "function_pointers.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 /**
  * main-entry point
  * @argv:argument vector
@@ -23,7 +24,11 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-	list = (unsigned char *) main;
+	list = malloc(number_of_bytes);
+	if (list == NULL)
+	{exit (98);
+	}
+	memcpy(list, main, number_of_bytes);
 	for (i = 0 ; i < number_of_bytes; i++)
 	{
 		printf("%02x", list[i]);
