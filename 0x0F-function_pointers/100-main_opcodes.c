@@ -9,7 +9,8 @@
  **/
 int main(int argc, char *argv[])
 {
-	int number_of_bytes;
+	int number_of_bytes, i;
+	char *list;
 
 	if (argc < 2)
 	{
@@ -22,4 +23,12 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
+	list = (char *) main;
+	for (i = 0 ; i < number_of_bytes; i++)
+	{
+		printf("%02x",list[i]);
+	}
+	printf("\n");
+	return (0);
+
 }
