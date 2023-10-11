@@ -8,9 +8,9 @@
  **/
 void print_name(char *name, void (*f)(char *))
 {
-
 	if (name == NULL)
 	{
+		free(name);
 		exit(98);
 	}
 	f(name);
