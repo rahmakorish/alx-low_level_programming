@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	}
 	list = malloc(number_of_bytes);
 	if (list == NULL)
-	{exit (98);
+	{exit(98);
 	}
 	memcpy(list, main, number_of_bytes);
 	for (i = 0 ; i < number_of_bytes; i++)
