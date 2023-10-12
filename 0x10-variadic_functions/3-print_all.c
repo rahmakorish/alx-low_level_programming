@@ -9,11 +9,21 @@
  * Return:0success
  **/
 void print_all(const char * const format, ...)
-{/*unsigned int i = n;*/
+{const char *i = format;
 	va_list arg;
-	int input;
+	const char *input;
+	int count = 0;
 
 	va_start(arg, format);
-	input = va_arg(arg, int);
+/*	printf("%s\n",i);*/
+
+	while (*i++)
+	{
+		count += 1;
+		/*printf("%s\n",format);*/
+	/*input = va_arg(arg, const char *);*/
 	(void)input;
+	}
+	printf("%s\n", format);
+	/*printf("%d\n",count);*/
 }
