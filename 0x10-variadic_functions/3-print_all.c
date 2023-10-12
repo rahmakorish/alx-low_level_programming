@@ -9,8 +9,11 @@
  * Return:0success
  **/
 void print_all(const char * const format, ...)
-{unsigned int i = n;
+{/*unsigned int i = n;*/
 	va_list arg;
+	int input;
 
-
+	va_start(arg, format);
+	input = va_arg(arg, int);
+	(void)input;
 }
