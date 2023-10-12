@@ -10,13 +10,14 @@
  * Return:0success
  **/
 void print_all(const char * const format, ...)
-{/*const char *i = format;*/
+{const char *i;
 	va_list arg;
 	unsigned int x = 0;
 	const char *input = format;
 
 	va_start(arg, format);
-	while (va_arg(arg, const char *) != NULL)
+	i = va_arg(arg, const char *);
+	while (*i++)
 	{
 	while (x < strlen(input))
 	{
@@ -26,6 +27,8 @@ void print_all(const char * const format, ...)
 	if (!isdigit(input[x]))
 	{x++;
 	}
-	}}
+	}
+	x = 0;
+	}
 	printf("%s\n", format);
 }
