@@ -10,13 +10,13 @@
  * Return:0success
  **/
 void print_all(const char * const format, ...)
-{/*const char *i;*/
+{
 	va_list arg;
 	unsigned int x = 0;
 	const char *input = format;
 
 	va_start(arg, format);
-	while (va_arg(arg, const char*) != NULL)
+	while (va_arg(arg, const char *) != 0)
 	{
 	while (x < strlen(input))
 	{
