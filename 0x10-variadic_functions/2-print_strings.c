@@ -32,12 +32,23 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		if ((va_arg(arg, int)))
 		{
-			convert_int_to_string(arg);
-			printf("%i%s",va_arg(arg, int),separator);
+			if (separator == NULL)
+		{printf("%i ", va_arg(arg, int));
 		i--;
 		}
-		(void)separator;
+		else 
+		{convert_int_to_string(arg);
+		printf("%i%s",va_arg(arg, int),separator);
+		i--;
+		}
+		
+	}
+		else if (!(va_arg(arg, int)))
+		{
+			printf("nil");
+		}
 	}
 	printf("\n");
 	va_end(arg);
+
 }
