@@ -11,12 +11,13 @@
  **/
 void print_all(const char * const format, ...)
 {
+	const char *i = format;
 	va_list arg;
 	unsigned int x = 0;
 	const char *input = format;
 
 	va_start(arg, format);
-	while (va_arg(arg, const char *) != 0)
+	while (*i++)
 	{
 	while (x < strlen(input))
 	{
@@ -27,6 +28,9 @@ void print_all(const char * const format, ...)
 	{x++;
 	}
 	}
+	x = 0;
+
+	printf("%s,", format);
 	}
-	printf("%s\n", format);
+	printf("\n");
 }
