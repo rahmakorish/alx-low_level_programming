@@ -28,7 +28,6 @@ void print_all(const char * const format, ...)
 	{x++;
 	}
 	}
-	x = 0;
 	}
 	printf("%s\n", format);
 }
