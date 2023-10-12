@@ -16,14 +16,14 @@ void print_all(const char * const format, ...)
 	const char *input = format;
 
 	va_start(arg, format);
-	while (va_arg(arg, const char *))
+	while (va_arg(arg, const char *) != NULL)
 	{
 	while (x < strlen(input))
 	{
 	if (isdigit(input[x]))
 	{x++;
 	}
-	else
+	if (!isdigit(input[x]))
 	{x++;
 	}
 	}}
