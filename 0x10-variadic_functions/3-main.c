@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-    print_all("hi");
+    print_all("3456l", "44");
     return (0);
 }

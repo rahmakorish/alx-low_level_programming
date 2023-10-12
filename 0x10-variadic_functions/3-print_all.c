@@ -16,12 +16,16 @@ void print_all(const char * const format, ...)
 	const char *input = format;
 
 	va_start(arg, format);
+	while (va_arg(arg, const char *))
+	{
 	while (x < strlen(input))
 	{
 	if (isdigit(input[x]))
-	x++;
-	else
-	x++;
+	{x++;
 	}
+	else
+	{x++;
+	}
+	}}
 	printf("%s\n", format);
 }
