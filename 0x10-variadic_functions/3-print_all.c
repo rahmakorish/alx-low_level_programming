@@ -10,8 +10,7 @@
  * Return:0success
  **/
 void print_all(const char * const format, ...)
-{
-	const char *i = format;
+{const char *i = format;
 	va_list arg;
 	unsigned int x = 0;
 	const char *input = format;
@@ -29,8 +28,8 @@ void print_all(const char * const format, ...)
 	}
 	}
 	x = 0;
-
-	printf("%s,", format);
 	}
+	printf("%s", format);
+	
 	printf("\n");
 }
