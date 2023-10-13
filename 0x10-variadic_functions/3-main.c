@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-    print_all("hi");
+    print_all("qwertyuopadghjklzxvbnm","hi");
     return (0);
 }

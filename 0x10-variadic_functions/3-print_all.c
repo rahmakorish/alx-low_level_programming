@@ -30,6 +30,5 @@ void print_all(const char * const format, ...)
 	x = 0;
 	}
 	printf("%s", format);
-	
 	printf("\n");
 }
