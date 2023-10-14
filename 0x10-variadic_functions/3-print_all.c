@@ -12,23 +12,13 @@
 void print_all(const char * const format, ...)
 {const char *i = format;
 	va_list arg;
-	unsigned int x = 0;
-	const char *input = format;
+	char *input;
 
 	va_start(arg, format);
-	while (*i++)
+	while (*i != '\0')
 	{
-	while (x < strlen(input))
-	{
-	if (isdigit(input[x]))
-	{x++;
+		printf("%s", (input = va_arg(arg, char*)));
+	break;
 	}
-	if (!isdigit(input[x]))
-	{x++;
-	}
-	}
-	x = 0;
-	}
-	printf("%s", format);
 	printf("\n");
 }
