@@ -13,7 +13,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	/*create temprory node*/
 	list_t *temp;
 	/*create copy of original node called ptr*/
-	list_t *ptr = *head;
+	list *ptr = *head;
 	/*allocate space for temp node*/
 	temp = malloc(sizeof(list_t));
 	/*free node if fail*/
@@ -32,6 +32,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	}
 	}
+
 	/*iterate over copy original adresses*/
 	while (ptr->next != NULL)
 	{
