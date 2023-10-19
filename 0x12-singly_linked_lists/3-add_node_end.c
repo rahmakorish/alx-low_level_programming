@@ -13,7 +13,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	/*create temprory node*/
 	list_t *temp;
 	/*create copy of original node called ptr*/
-	list *ptr = *head;
+	list_t *ptr = *head;
 	/*allocate space for temp node*/
 	temp = malloc(sizeof(list_t));
 	/*free node if fail*/
