@@ -5,9 +5,9 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * _strtlen-measure length of constant
+ *_strlen-measure length of constant
  * @con:given const
- * Return:length of input
+ *Return:length of input
  **/
 int _strlen(const char *con)
 {
@@ -25,43 +25,43 @@ int _strlen(const char *con)
  * Return:0success
  **/
 void print_all(const char * const format, ...)
-{      
-	va_list arg;
-	char *input;
-	const char *str = format;
-	int i = 0, num;
-	float num1;
+{va_list arg;
+char *input;
+int i = 0, num;
 
 	va_start(arg, format);
 	while (format && format[i])
-	{while (i < (_strlen(format)))
-		{switch (str[i])
+	{
+		while (i < (_strlen(format)))
+		{
+			switch (format[i])
 			{case 's':
 				input = va_arg(arg, char*);
-				printf ("%s", input);
+				if (!input)
+				{printf("(nil)");
+				break;
+				}
+				printf("%s", input);
 				break;
 				case 'i':
 				num = va_arg(arg, int);
 				printf("%i", num);
 				break;
 				case'f':
-				num1 = va_arg(arg, double);
-				printf("%f", num1);
+				printf("%f", va_arg(arg, double));
 				break;
 				case 'c':
-				printf ("%c", va_arg(arg, int));
+				printf("%c", va_arg(arg, int));
 				break;
 				break;
 				default:
 				break;
 			}
-			 	i++;
-				if (i == _strlen(format))
-				{break;
-				}
-				printf(", ");
+			i++;
+			if (i == _strlen(format))
+			{break;
 			}
-		}
-	
+			printf(", ");
+			}}
 	printf("\n");
 }
