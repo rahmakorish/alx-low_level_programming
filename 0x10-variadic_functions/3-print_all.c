@@ -30,8 +30,8 @@ char *input;
 int i = 0;
 
 	va_start(arg, format);
-	while (format && format[i])
-	{
+	/*while (format && format[i])
+	{*/
 		while (i < (_strlen(format)))
 		{
 			switch (format[i])
@@ -56,7 +56,7 @@ int i = 0;
 			{break;
 			}
 			printf(", ");
-			}}
+			}
 	printf("\n");
 	va_end(arg);
 }
