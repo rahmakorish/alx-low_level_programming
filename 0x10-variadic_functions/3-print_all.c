@@ -31,35 +31,35 @@ int i = 0;
 
 va_start(arg, format);
 while (i < _strlen(format))
+{
+	switch (format[i])
 	{
-			switch (format[i])
-			{
-				case 's':
-				input = va_arg(arg, char*);
-				if (!input)
-				{printf("(nil)");
-				break;
-				}
-				printf("%s", input);
-				break;
-				case 'i':
-				printf("%i", va_arg(arg, int));
-				break;
-				case'f':
-				printf("%f", va_arg(arg, double));
-				break;
-				case 'c':
-				printf("%c", va_arg(arg, int));
-				break;
-				default:
-				break;
-			}
-			i++;
-			if (i == _strlen(format))
-			{break;
-			}
-			printf(", ");
+		case 's':
+		input = va_arg(arg, char*);
+		if (!input)
+		{printf("(nil)");
+		break;
+		}
+		printf("%s", input);
+		break;
+		case 'i':
+		printf("%i", va_arg(arg, int));
+		break;
+		case'f':
+		printf("%f", va_arg(arg, double));
+		break;
+		case 'c':
+		printf("%c", va_arg(arg, int));
+		break;
+		default:
+		break;
 	}
+	i++;
+	if (i == _strlen(format))
+	{break;
+	}
+	printf(", ");
+}
 	printf("\n");
 	va_end(arg);
 }
