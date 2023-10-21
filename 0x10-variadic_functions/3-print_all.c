@@ -27,7 +27,7 @@ int _strlen(const char *con)
 void print_all(const char * const format, ...)
 {va_list arg;
 char *input;
-int i = 0, num;
+int i = 0;
 
 	va_start(arg, format);
 	while (format && format[i])
@@ -37,22 +37,20 @@ int i = 0, num;
 			switch (format[i])
 			{case 's':
 				input = va_arg(arg, char*);
-				/*if (!input)
+				if (!input)
 				{printf("(nil)");
 				break;
-				}*/
+				}
 				printf("%s", input);
 				break;
 				case 'i':
-				num = va_arg(arg, int);
-				printf("%i", num);
+				printf("%i", va_arg(arg, int));
 				break;
 				case'f':
 				printf("%f", va_arg(arg, double));
 				break;
 				case 'c':
 				printf("%c", va_arg(arg, int));
-				break;
 				break;
 				default:
 				break;
@@ -64,4 +62,5 @@ int i = 0, num;
 			printf(", ");
 			}}
 	printf("\n");
+	va_end(arg);
 }
