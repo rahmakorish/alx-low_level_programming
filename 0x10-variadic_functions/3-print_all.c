@@ -29,14 +29,17 @@ void print_all(const char * const format, ...)
 char *input;
 int i = 0;
 
-	va_start(arg, format);
-	/*while (format && format[i])
-	{*/
-		while (i < (_strlen(format)))
-		{
+va_start(arg, format);
+while (i < _strlen(format))
+	{
 			switch (format[i])
-			{case 's':
+			{
+				case 's':
 				input = va_arg(arg, char*);
+				if (!input)
+				{printf("(nil)");
+				break;
+				}
 				printf("%s", input);
 				break;
 				case 'i':
@@ -56,7 +59,7 @@ int i = 0;
 			{break;
 			}
 			printf(", ");
-			}
+	}
 	printf("\n");
 	va_end(arg);
 }
