@@ -37,10 +37,10 @@ int i = 0, num;
 			switch (format[i])
 			{case 's':
 				input = va_arg(arg, char*);
-				if (!input)
+				/*if (!input)
 				{printf("(nil)");
 				break;
-				}
+				}*/
 				printf("%s", input);
 				break;
 				case 'i':
