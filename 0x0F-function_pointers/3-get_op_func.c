@@ -1,4 +1,4 @@
-#include "function_pointers.h"
+#include "3-calc.h"
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -14,9 +14,9 @@ int (*get_op_func(char *s))(int, int)
     };
     int i = 0;
 
-    while (i < 5)
+    while (i <= 5)
 	{
-		if(s && s[0] == ops[0] && !s[1])
+		if(s && s[0] ==ops[1].ops[0] && !s[1])
 			return (ops[i].f);
 		i++;
 	}

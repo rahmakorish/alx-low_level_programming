@@ -1,4 +1,4 @@
-#include "calc.h"
+#include "3-calc.h"
 #include <stdlib.h>
 #include <stdio.h>
 /**
@@ -44,8 +44,8 @@ int op_div(int a, int b)
 {
 	if (b == 0)
 	{
-		printf("Error");
-		return (1);
+		printf("Error\n");
+		 exit(100);
 	}
 	else
 	{
@@ -63,10 +63,9 @@ int op_mod(int a, int b)
 {
 	if (b == 0)
 	{
-		printf("Error");
-		return (0);
+		printf("Error\n");
+		exit(100);
 	}
-	int mod = a % b;
-	return (mod);
+	return (a % b);
 }
 
