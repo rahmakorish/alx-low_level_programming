@@ -2,7 +2,7 @@
 /**
  * add_nodeint_end-add node to end of list
  * @head:list
- * @n:data 
+ * @n:data
  * Return:adress of new element
  **/
 listint_t *add_nodeint_end(listint_t **head, const int n)
@@ -20,10 +20,10 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		if (!temp->n)
 		{
 			free(temp);
-			return(NULL);
+			return (NULL);
 		}
 	}
-	if(ptr)
+	if (ptr)
 	{
 		while (ptr->next != NULL)
 		{

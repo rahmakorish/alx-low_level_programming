@@ -15,10 +15,10 @@ listint_t *add_nodeint(listint_t **head, const int n)
 		return (NULL);
 	}
 	ptr->n = n;
-	if(!ptr->n)
+	if (!ptr->n)
 	{
 		free(ptr);
-		return(NULL);
+		return (NULL);
 	}
 	ptr->next = *head;
 	*head = ptr;
