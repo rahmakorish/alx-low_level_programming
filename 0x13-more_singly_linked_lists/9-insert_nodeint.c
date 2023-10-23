@@ -2,7 +2,7 @@
 /**
  *insert_nodeint_at_index-inserts a node at position
  *@head:start list
- *@idx:index of list 
+ *@idx:index of list
  *@n:data of node
  *Return:adress of node
  **/
@@ -10,7 +10,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *temp;
 	listint_t *ptr = *head;
-	unsigned int pos = idx - 1;
+	unsigned int pos = 1;
 
 	temp = malloc(sizeof(listint_t));
 	if (temp == NULL)
@@ -29,7 +29,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	idx--;
 	}
 	temp->next = ptr->next;
-	ptr->next= temp;
+	ptr->next = temp;
 
 	return (temp);
 }
