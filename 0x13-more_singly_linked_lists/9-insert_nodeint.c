@@ -29,7 +29,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		free(temp);
 		return (NULL);
 	}
-	if (idx < count)
+	if (idx >= count)
+	{
+		exit(98);
+		return (NULL);
+	}
+	else if (idx < count)
 	{
 		while (idx != 1)
 		{
@@ -38,10 +43,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		}
 	temp->next = ptr->next;
 	ptr->next = temp;
-	}
-	else
-	{
-		return (NULL);
 	}
 	return (temp);
 }
