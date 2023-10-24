@@ -1,14 +1,14 @@
 #include "lists.h"
 /**
- * reverse_listint-reverses a list
- * @head:list inverted
- * Return:pointer to node
+ *reverse_listint-reverses a list
+ *@head:list inverted
+ *Return:pointer to node
  **/
 listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *temp, *temp2;
 
-	if(!head || !(*head))
+	if (!head || !(*head))
 	return (NULL);
 	temp2 = NULL;
 	temp = NULL;
