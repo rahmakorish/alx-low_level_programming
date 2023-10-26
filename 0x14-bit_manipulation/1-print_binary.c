@@ -1,12 +1,12 @@
 #include "main.h"
-/*
- * print_binary-prints binary of a number
+/**
+ *print_binary-prints binary of a number
  * @n:decimal num
  * Return:0success
  */
 void print_binary(unsigned long int n)
 {
-	int bit, mask =0;
+	int bit, mask = 0;
 
 	bit = sizeof(n) * 8;
 while (bit)
