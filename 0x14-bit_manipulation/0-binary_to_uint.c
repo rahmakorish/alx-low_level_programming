@@ -9,13 +9,10 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int decimal = 0, weight = 1;
 	unsigned int rem, numb;
 
-	if (!b)
+	if (!b || (*b != '0' &&  *b != '1'))
 	return (0);
 	else
 	{
-		if (*b != '0' && *b != '1')
-		{return (0);
-		}
 		numb = atoi(b);
 		while (numb)
 		{
