@@ -13,6 +13,9 @@ unsigned int binary_to_uint(const char *b)
 	return (0);
 	else
 	{
+		if (*b != '0' && *b != '1')
+		{return (0);
+		}
 		numb = atoi(b);
 		while (numb)
 		{
