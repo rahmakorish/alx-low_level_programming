@@ -22,6 +22,6 @@ unsigned int binary_to_uint(const char *b)
 			numb = numb / 10;
 		}
 	}
-		return (rem);
+		return (decimal);
 	
 }
