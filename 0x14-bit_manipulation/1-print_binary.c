@@ -7,17 +7,22 @@
 void print_binary(unsigned long int n)
 {
 	int bit, mask =0;
-	bit = sizeof(unsigned long int) * 8;
+
+	bit = sizeof(n) * 8;
 while (bit)
 {
-	if (n & 11 << --bit)
-	{_putchar('1');
+	if (n & 1l << --bit)
+	{
+		_putchar('1');
 		mask++;
 	}
 	else if (mask)
 	{
-		putchar('0');
+		_putchar('0');
 	}
 }
+	if (!mask)
+		_putchar('0');
+
 
 }
