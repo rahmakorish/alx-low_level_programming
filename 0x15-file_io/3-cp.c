@@ -1,9 +1,9 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * cp-copies the content of a file to another
- * @file_from:original file
- * @file|_to:copied file
+ * main-copies the content of a file to another
+ * @argc:argument count
+ * @argv:argument vector
  * Return:0success
  **/
 int main(int argc, char *argv[])
@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 	const char *filefrom = argv[1];
 	const char *fileto = (argv[2]);
 	int ofile, cfile;
-	size_t count = 0,need = 1000000;
+	size_t count = 0, need = 1000000;
 	char BUFF[BUF_SIZE * 8];
 
 	if (argc != 3)
@@ -21,17 +21,17 @@ int main(int argc, char *argv[])
 	}
 	ofile = open(filefrom, O_RDONLY);
 	if (!ofile)
-	{dprintf(STDOUT_FILENO, "Can't read from file %s\n", filefrom/*argv[1]*/);
+	{dprintf(STDOUT_FILENO, "Can't read from file %s\n", argv[1]);
 	exit(98);
 	}
 	cfile = open(fileto, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (!cfile)
 	{
-	dprintf(STDOUT_FILENO,"Error: Can't write to %s\n",fileto/* argv[2]*/);
+	dprintf(STDOUT_FILENO, "Error: Can't write to %s\n", argv[2]);
 	exit(99);
 	}
-	count = read(ofile,&BUFF[0],need);
-	count = write(cfile, &BUFF[0],count);
+	count = read(ofile, &BUFF[0], need);
+	count = write(cfile, &BUFF[0], count);
 	close(ofile);
 	close(cfile);
 	return (0);
