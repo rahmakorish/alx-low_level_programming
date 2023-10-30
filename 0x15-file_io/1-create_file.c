@@ -1,5 +1,20 @@
 #include "main.h"
 /**
+ * _strlen-retrn length of input
+ * @str:string needed
+ * Return:length of string
+ **/
+int _strlen(char *str)
+{
+	int count = 0;
+	
+	if (s == NULL)
+		return (0);
+	while(*s++)
+	count++;
+	return (count);
+}
+/**
  * create_file-create a file
  * @filename:name of created file
  * @text_content:a null terminated string
@@ -8,23 +23,15 @@
 int create_file(const char *filename, char *text_content)
 {
 	int newfile;
+	size_t byte = 0, length = _strlen(text_content);
 
 	if (filename == NULL || !text_content)
 		return (-1);
 	newfile = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
-	if (!newfile)
+	if (newfile == -1)
 		return (-1);
-	if (write(newfile, text_content, sizeof(text_content) - 1) == -1)
-	{
-		perror("write");
-		return (-1);
-	}
-	write(newfile, text_content, sizeof(text_content) - 1);
-	if (close(newfile) == -1)
-	{
-		perror("Close");
-		return (-1);
-	}
+	if (len)	
+	byte = write(newfile, text_content, len);
 	close(newfile);
-	return (1);
+	return (byte == len ? 1 : -1);
 }
