@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	const char *fileto = (argv[2]);
 	int ofile, cfile;
 	size_t count = 0;
-	char BUFF[BUF_SIZE * 8];
+	char *BUFF[BUF_SIZE * 8];
 
 	if (argc != 3)
 	{
