@@ -6,7 +6,7 @@
  * Return:number of letters
  **/
 ssize_t read_textfile(const char *filename, size_t letters)
-{char *string = "hello";
+{char *string = "hello world";
 	int file;
 
 	if (filename == NULL)
