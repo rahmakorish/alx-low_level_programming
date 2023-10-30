@@ -34,13 +34,6 @@ int main(int argc, char *argv[])
 	count = write(cfile, &BUFF[0], count);
 
 	ofile = close(ofile);
-	if (ofile)
-	{dprintf(STDOUT_FILENO, "Error: Can't close fd FD_VALUE\n");
-		exit(100);
-	}
 	cfile = close(cfile);
-	{dprintf(STDOUT_FILENO, "Error: Can't close fd FD_VALUE\n");
-		exit(100);
-	}
 	return (0);
 }
