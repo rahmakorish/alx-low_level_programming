@@ -33,14 +33,6 @@ int main(int argc, char *argv[])
 	count = read(ofile, &BUFF[0], BUF_SIZE);
 	count = write(cfile, &BUFF[0], count);
 	close(ofile);
-	if (close(ofile) == -1)
-	{
-		return (-1);
-	}
-	close(cfile);
-	if (close(ofile) == -1)
-	{
-		return (-1);
-	}
+	close (cfile);
 	return (0);
 }
