@@ -6,28 +6,21 @@
  * Return:number of letters
  **/
 ssize_t read_textfile(const char *filename, size_t letters)
-{char *string = "hello world";
+{
+	char string[BUF_SIZE * 8];
 	int file;
+	ssize_t bufsize;
 
-	if (filename == NULL)
+	if (filename == NULL || !letters)
 		return (0);
-	file = open(filename, O_RDWR, 0600);
+	file = open(filename, O_RDONLY, 0600);
 	if (file == -1)
 	{
 		perror("open");
 		return (0);
 	}
-	if (write(file, string, letters) == -1)
-	{
-		perror("write");
-		return (0);
-	}
-	dprintf(file, "%s", string);
-	if (close(file) == -1)
-	{
-		perror("close");
-		return (0);
-	}
-	dprintf(STDOUT_FILENO, "%s", string);
-	return (letters);
+	bufsize = read(file, &string[0], letters);
+	bufsize = write(STDOUT_FILENO, &string[0], bufsize);
+	close(file);
+	return (bufsize);
 }
