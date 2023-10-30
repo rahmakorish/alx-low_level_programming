@@ -15,20 +15,19 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		exit(97);
-		dprintf(STDOUT_FILENO, "Usage: cp file_from file_to\n");
+	dprintf(STDOUT_FILENO, "Usage: cp file_from file_to\n");
+	exit(97);
 	}
 	ofile = open(filefrom, O_RDONLY);
 	if (!ofile)
-	{
-		exit(98);
-	dprintf(STDOUT_FILENO, "Can't read from file %s\n", filefrom/*argv[1]*/);
+	{dprintf(STDOUT_FILENO, "Can't read from file %s\n", filefrom/*argv[1]*/);
+	exit(98);
 	}
 	cfile = open(fileto, O_WRONLY | O_CREAT | O_TRUNC, 0661);
 	if (!cfile)
 	{
-		exit(99);
 	dprintf(STDOUT_FILENO,"Error: Can't write to %s\n",fileto/* argv[2]*/);
+	exit(99);
 	}
 	(void) BUFF;
 	/*read(ofile,&BUFF[0],
