@@ -8,9 +8,9 @@ int _strlen(char *str)
 {
 	int count = 0;
 	
-	if (s == NULL)
+	if (str == NULL)
 		return (0);
-	while(*s++)
+	while(*str++)
 	count++;
 	return (count);
 }
@@ -23,7 +23,7 @@ int _strlen(char *str)
 int create_file(const char *filename, char *text_content)
 {
 	int newfile;
-	size_t byte = 0, length = _strlen(text_content);
+	size_t byte = 0, len = _strlen(text_content);
 
 	if (filename == NULL || !text_content)
 		return (-1);
