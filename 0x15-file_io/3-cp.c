@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
 	const char *filefrom = argv[1];
 	const char *fileto = (argv[2]);
 	int ofile, cfile;
+	size_t count = 0,need = 1000000;
 	char BUFF[BUF_SIZE * 8];
 
 	if (argc != 3)
@@ -23,14 +24,15 @@ int main(int argc, char *argv[])
 	{dprintf(STDOUT_FILENO, "Can't read from file %s\n", filefrom/*argv[1]*/);
 	exit(98);
 	}
-	cfile = open(fileto, O_WRONLY | O_CREAT | O_TRUNC, 0661);
+	cfile = open(fileto, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (!cfile)
 	{
 	dprintf(STDOUT_FILENO,"Error: Can't write to %s\n",fileto/* argv[2]*/);
 	exit(99);
 	}
-	(void) BUFF;
-	/*read(ofile,&BUFF[0],
-	write(cfile,*/
+	count = read(ofile,&BUFF[0],need);
+	count = write(cfile, &BUFF[0],count);
+	close(ofile);
+	close(cfile);
 	return (0);
 }
