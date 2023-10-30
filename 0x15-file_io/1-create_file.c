@@ -11,12 +11,7 @@ int create_file(const char *filename, char *text_content)
 
 	if (filename == NULL || !text_content)
 		return (-1);
-	/*if file present truncate it*/
-	if (open(filename, O_WRONLY))
-	{
-	newfile = open(filename, O_WRONLY, 0600);}
-	if (!open(filename, O_WRONLY))
-	newfile = open(filename, O_CREAT | O_WRONLY, 0600);
+	newfile = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 	if (!newfile)
 		return (-1);
 	if (write(newfile, text_content, sizeof(text_content) - 1) == -1)
