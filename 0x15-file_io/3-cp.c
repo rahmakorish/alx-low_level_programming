@@ -32,7 +32,15 @@ int main(int argc, char *argv[])
 	}
 	count = read(ofile, &BUFF[0], need);
 	count = write(cfile, &BUFF[0], count);
-	close(ofile);
-	close(cfile);
+
+	ofile = close(ofile);
+	if (ofile)
+	{dprintf(STDOUT_FILENO, "Error: Can't close fd FD_VALUE\n");
+		exit(100);
+	}
+	cfile = close(cfile);
+	{dprintf(STDOUT_FILENO, "Error: Can't close fd FD_VALUE\n");
+		exit(100);
+	}
 	return (0);
 }
