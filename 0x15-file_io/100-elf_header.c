@@ -166,6 +166,5 @@ int main(int argc, char *argv[])
 	dprintf(STDOUT_FILENO, "Erroe closing file: %d\n", fd);
 	exit(98);
 	}
-	
 	return (EXIT_SUCCESS);
 }
