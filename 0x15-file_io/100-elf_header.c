@@ -63,13 +63,13 @@ void print_version(Elf64_Ehdr h)
 {
 	printf(" Version:      %d", h.e_ident[EI_VERSION]);
 	switch (h.e_ident[EI_VERSION])
-        {
-                case EV_CURRENT:
-                        printf(" (Ccurrent) ");
-                        break;
-                case EV_NONE:
-                        printf("%s", "");
-                        break;
+	{
+		case EV_CURRENT:
+		printf(" (Current) ");
+		break;
+	case EV_NONE:
+		printf("%s", "");
+		break;
 		}
 	printf("\n");
 }
@@ -90,31 +90,31 @@ void print_type(Elf64_Ehdr h)
 	char *p = (char *)&h.e_type;
 	int i = 0;
 
-        printf("  Type:       ");
-       if (h.e_ident[EI_DATA] == ELFDATA2MSB)
-	       i = 1;
-       switch (p[i])
-       {
-	       case ET_NONE:
-		       printf("NONE (NONE)");
-		       break;
-		case ET_REL:
-		       printf("REL (Relocatable file)");
-		       break;
-		case ET_EXEC:
-		       printf("EXEC (Executable file)");
-		       break;
-		case ET_DYN:
-		       printf("DYN (Shared object file)");
-		       break;
-		case ET_CORE:
-		       printf("CORE (Core file)");
-		       break;
-		default:
-		       printf("<unknown>: %x", p[i]);
+	printf("  Type:       ");
+	if (h.e_ident[EI_DATA] == ELFDATA2MSB)
+	i = 1;
+	switch (p[i])
+	{
+		case ET_NONE:
+			printf("NONE (NONE)");
 			break;
-       }
-       printf("\n");
+		case ET_REL:
+		printf("REL (Relocatable file)");
+		break;
+		case ET_EXEC:
+		printf("EXEC (Executable file)");
+		break;
+		case ET_DYN:
+		printf("DYN (Shared object file)");
+		break;
+		case ET_CORE:
+		printf("CORE (Core file)");
+			break;
+		default:
+			printf("<unknown>: %x", p[i]);
+			break;
+	}
+	printf("\n");
 }
 
 /**
@@ -136,7 +136,8 @@ int main(int argc, char *argv[])
 	if (fd == -1)
 	dprintf(STDOUT_FILENO, "Can't open file: %s\n", argv[1]);
 		exit(98);
-	if (h.e_ident[0] == 0x7f && h.e_ident[1] == 'E' && h.e_ident[2] == 'L' && h.e_ident[3] == 'F')
+	if (h.e_ident[0] == 0x7f && h.e_ident[1] == 'E' && h.e_ident[2] == 'L'
+			&& h.e_ident[3] == 'F')
 	{
 		printf("ELF HEADER:\n");
 	}
