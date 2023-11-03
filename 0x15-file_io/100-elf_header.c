@@ -116,7 +116,77 @@ void print_type(Elf64_Ehdr h)
 	}
 	printf("\n");
 }
+/**
+ * print_entry-prints the entry point
+ * @h:elf header struct
+ */
+void print_entry(Elf64_Ehdr h)
+{
+	int i = 0; len = 0;
+	unsigned char *p = (unsigned cher *)&h.e_entry;
 
+	printf("  Entry point adress:     0x");
+	if (h.e_ident[EI_DATA] != ELFDATA2MSB)
+	{
+		i = h.e_ident[EI_CLASS] == ELFCLASS64 ? 7 :3;
+		while (!p[i])
+			i--;
+		printf("%x",p[i--];
+		for(; i>= 0; i--)
+		printf("%02x", p[i]);
+		printf("\n");
+	}
+	else
+	{
+	i = 0;
+	len = h.e_ident[EI_CLASS] == ELFCLASS64 ? 7 : 3;
+	while (!p[i])
+	i++;
+	printf("%x", p[i++]);
+	for (; i <= len, i++)
+	printf("%02x", p[i]);
+	printf("\n");
+	}
+}
+/**
+ * print_osabi-prints elf osabi
+ * @h: elf header
+ */
+void print_osabi(Elf64_Ehdr h)
+{
+	printf (" OS/ABI:         ");
+	switch (h.e_ident[EI_OSABI])
+	{
+		case ELFOSABI_NONE:
+			printf("UNIX - SYSTEM V");
+			break;
+		case ELFOSABI_HPUX:
+			printf("UNIX - HP-UX");
+			break;
+		case ELFOSABI_NETBSD:
+			printf("UNIX - NETBSD");
+			break;
+		case ELFOSABI_LINUX:
+			printf("UNIX - LINUX");
+			break;
+		case ELFOSABI_SOLARIS:
+			printf("UNIX - Solaris");
+			break;
+		case ELFOSABI_AIX:
+			printf("UNIX - AIX");
+			break
+		case ELFOSABI_IRIX:
+			printf("UNIX - IRIX");
+			break;
+		case ELFOSABI_FREEBSD:
+			printf("UNIX - FreeBSD");
+			break;
+		case ELFOSABI_TRU64:
+			printf("UNIX - TRU64");
+			break;
+	}
+	printf("\n");
+}
 /**
  * main-copies the content of a file to another
  * @argc:argument count
@@ -157,10 +227,10 @@ int main(int argc, char *argv[])
 	print_class(h);
 	print_data(h);
 	print_version(h);
-	/*print_osabi(h);*/
+	print_osabi(h);
 	print_abiversion(h);
 	print_type(h);
-	/*print_entry(h);*/
+	print_entry(h);
 	if (close(fd))
 	{
 	dprintf(STDOUT_FILENO, "Erroe closing file: %d\n", fd);
