@@ -184,9 +184,38 @@ void print_osabi(Elf64_Ehdr h)
 		case ELFOSABI_TRU64:
 			printf("UNIX - TRU64");
 			break;
+		default:
+		print_osabi_more(h);
+		break;	
 	}
 	printf("\n");
 }
+/**
+ * print_osabi_more- print Elf osabi
+ * @h: Elf header struct
+ * */
+void print_osabi_more(Elf64_Ehdr h)
+{
+	switch (h.e_ident[EI_OSABI])
+	{
+		case ELFOSABI_MODESTO:
+			printf("Novell - Modesto");
+			break;
+		case ELFOSABI_OPENBSD:
+			printf("UNIX - OpenBSD");
+			break;
+		case ELFOSABI_STANDALONE:
+			printf("Standalone App");
+			break;
+		case ELFOSABI_ARM:
+			printf("ARM");
+			break;
+		default:
+			printf("<unknown: %x>", h.e_ident[EI_OSABI]);
+			break;
+	}
+}
+
 /**
  * main-copies the content of a file to another
  * @argc:argument count
