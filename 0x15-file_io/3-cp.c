@@ -20,9 +20,9 @@ int main(int argc, char *argv[])
 	exit(97);
 	}
 	ofile = open(filefrom, O_RDONLY);
-	if (!ofile)
+	if (ofile == -1)
 	{dprintf(STDOUT_FILENO, "Can't read from file %s\n", argv[1]);
-	exit(98);
+	exit(99);
 	}
 	cfile = open(fileto, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (!cfile)
@@ -32,8 +32,13 @@ int main(int argc, char *argv[])
 	}
 	count = read(ofile, &BUFF[0], need);
 	count = write(cfile, &BUFF[0], count);
-
+	
 	ofile = close(ofile);
 	cfile = close(cfile);
+	if (ofile)
+	{
+		dprintf(STDOUT_FILENO, "Error: Can't close fd FD_VALUE\n");
+				exit(100);
+	}
 	return (0);
 }
