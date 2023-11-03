@@ -1,6 +1,6 @@
 #include "main.h"
 #include <elf.h>
-void print_osabi_more(Elf64_Ehdr h);
+
 /**
  * print_magic-prints elf magic
  * @h: elf header
@@ -222,34 +222,35 @@ void print_osabi_more(Elf64_Ehdr h)
  * @argv:argument vector
  * Return:0success
  **/
-int main(int argc, char *argv[])
+int main(int ac, char **av)
 {
 	int fd;
 	Elf64_Ehdr h;
 	ssize_t b;
 
-	if (argc != 2)
-	dprintf(STDOUT_FILENO, "Usage: elf_header elf_filename\n");
-	exit(98);
-	fd = open(argv[1], O_RDONLY);
+	if (ac != 2)
+	{
+		dprintf(STDOUT_FILENO, "Usage: elf_header elf_filename\n");
+		exit(98);}
+	fd = open(av[1], O_RDONLY);
 	if (fd == -1)
-	{dprintf(STDOUT_FILENO, "Can't open file: %s\n", argv[1]);
+	{dprintf(STDOUT_FILENO, "Can't open file: %s\n", av[1]);
 		exit(98);
 	}
 	b = read(fd, &h, sizeof(h));
 	if (b < 1 || b != sizeof(h))
 	{
-		dprintf(STDOUT_FILENO, "Can't read from file: %s\n", argv[1]);
+		dprintf(STDOUT_FILENO, "Can't read from file: %s\n", av[1]);
 		exit(98);
 	}
 	if (h.e_ident[0] == 0x7f && h.e_ident[1] == 'E' && h.e_ident[2] == 'L'
 			&& h.e_ident[3] == 'F')
 	{
-		printf("ELF HEADER:\n");
+		printf("ELF Header:\n");
 	}
 	else
 	{
-		dprintf(STDOUT_FILENO, "Not ELF file: %s\n", argv[1]);
+		dprintf(STDOUT_FILENO, "Not ELF file: %s\n", av[1]);
 		exit(98);
 	}
 	print_magic(h);
@@ -266,4 +267,5 @@ int main(int argc, char *argv[])
 	exit(98);
 	}
 	return (EXIT_SUCCESS);
+	exit(0);
 }
