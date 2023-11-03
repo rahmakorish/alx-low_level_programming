@@ -122,8 +122,8 @@ void print_type(Elf64_Ehdr h)
  */
 void print_entry(Elf64_Ehdr h)
 {
-	int i = 0; len = 0;
-	unsigned char *p = (unsigned cher *)&h.e_entry;
+	int i = 0, len = 0;
+	unsigned char *p = (unsigned char *)&h.e_entry;
 
 	printf("  Entry point adress:     0x");
 	if (h.e_ident[EI_DATA] != ELFDATA2MSB)
@@ -131,7 +131,7 @@ void print_entry(Elf64_Ehdr h)
 		i = h.e_ident[EI_CLASS] == ELFCLASS64 ? 7 :3;
 		while (!p[i])
 			i--;
-		printf("%x",p[i--];
+		printf("%x",p[i--]);
 		for(; i>= 0; i--)
 		printf("%02x", p[i]);
 		printf("\n");
@@ -143,7 +143,7 @@ void print_entry(Elf64_Ehdr h)
 	while (!p[i])
 	i++;
 	printf("%x", p[i++]);
-	for (; i <= len, i++)
+	for (; i <= len; i++)
 	printf("%02x", p[i]);
 	printf("\n");
 	}
@@ -174,7 +174,7 @@ void print_osabi(Elf64_Ehdr h)
 			break;
 		case ELFOSABI_AIX:
 			printf("UNIX - AIX");
-			break
+			break;
 		case ELFOSABI_IRIX:
 			printf("UNIX - IRIX");
 			break;
