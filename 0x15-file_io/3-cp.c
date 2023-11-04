@@ -24,6 +24,7 @@ int main(int argc, char *argv[])
 	{dprintf(STDOUT_FILENO, "Can't read from file %s\n", argv[1]),
 	exit(99);
 	}
+
 	cfile = open(fileto, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (!cfile)
 	{

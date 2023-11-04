@@ -1,6 +1,6 @@
 #include "main.h"
 #include <elf.h>
-
+void print_osabi_more(Elf64_Ehdr h);
 /**
  * print_magic-prints elf magic
  * @h: elf header
