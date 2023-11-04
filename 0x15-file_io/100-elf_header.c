@@ -128,11 +128,11 @@ void print_entry(Elf64_Ehdr h)
 	printf("  Entry point adress:     0x");
 	if (h.e_ident[EI_DATA] != ELFDATA2MSB)
 	{
-		i = h.e_ident[EI_CLASS] == ELFCLASS64 ? 7 :3;
+		i = h.e_ident[EI_CLASS] == ELFCLASS64 ? 7 : 3;
 		while (!p[i])
 			i--;
-		printf("%x",p[i--]);
-		for(; i>= 0; i--)
+		printf("%x", p[i--]);
+		for (; i >= 0; i--)
 		printf("%02x", p[i]);
 		printf("\n");
 	}
@@ -154,7 +154,7 @@ void print_entry(Elf64_Ehdr h)
  */
 void print_osabi(Elf64_Ehdr h)
 {
-	printf (" OS/ABI:         ");
+	printf(" OS/ABI:         ");
 	switch (h.e_ident[EI_OSABI])
 	{
 		case ELFOSABI_NONE:
@@ -186,14 +186,14 @@ void print_osabi(Elf64_Ehdr h)
 			break;
 		default:
 		print_osabi_more(h);
-		break;	
+		break;
 	}
 	printf("\n");
 }
 /**
  * print_osabi_more- print Elf osabi
  * @h: Elf header struct
- * */
+ **/
 void print_osabi_more(Elf64_Ehdr h)
 {
 	switch (h.e_ident[EI_OSABI])
@@ -218,8 +218,8 @@ void print_osabi_more(Elf64_Ehdr h)
 
 /**
  * main-copies the content of a file to another
- * @argc:argument count
- * @argv:argument vector
+ * @ac:argument count
+ * @av:argument vector
  * Return:0success
  **/
 int main(int ac, char **av)
@@ -229,18 +229,18 @@ int main(int ac, char **av)
 	ssize_t b;
 
 	if (ac != 2)
-	{
-		dprintf(STDOUT_FILENO, "Usage: elf_header elf_filename\n");
-		exit(98);}
+	{dprintf(STDOUT_FILENO, "Usage: elf_header elf_filename\n"),
+		exit(98);
+	}
 	fd = open(av[1], O_RDONLY);
 	if (fd == -1)
-	{dprintf(STDOUT_FILENO, "Can't open file: %s\n", av[1]);
+	{dprintf(STDOUT_FILENO, "Can't open file: %s\n", av[1]),
 		exit(98);
 	}
 	b = read(fd, &h, sizeof(h));
 	if (b < 1 || b != sizeof(h))
 	{
-		dprintf(STDOUT_FILENO, "Can't read from file: %s\n", av[1]);
+		dprintf(STDOUT_FILENO, "Can't read from file: %s\n", av[1]),
 		exit(98);
 	}
 	if (h.e_ident[0] == 0x7f && h.e_ident[1] == 'E' && h.e_ident[2] == 'L'
