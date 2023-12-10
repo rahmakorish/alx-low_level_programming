@@ -5,19 +5,12 @@
  **/
 void free_dlistint(dlistint_t *head)
 {
-	dlistint_t *temp = malloc(sizeof(dlistint_t));
+	dlistint_t *temp;
 
-	/*temp = head;*/
-	if (!temp || !head)
-	{
-		if (temp)
-			free(temp);
-	free(head);
-	}
-	while (head != NULL)
-	{
-		temp = head;
-		head = head->next;
-		free(temp);
-	}
+    while (head != NULL)
+    {
+        temp = head;
+        head = head->next;
+        free(temp);
+    }
 }
