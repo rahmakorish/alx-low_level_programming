@@ -6,16 +6,16 @@
  **/
 int sum_dlistint(dlistint_t *head)
 {
-	int sum;
-	dlistint_t *temp = malloc(sizeof(dlistint_t));
+	int sum = 0;
+	dlistint_t *temp = head;
 
-	temp = head;
 	if (head == NULL)
 	return (0);
-	while (temp != NULL)
+	while (temp->next != NULL)
 	{
 		sum += temp->n;
 		temp = temp->next;
 	}
-return (sum);
+	sum += temp->n;
+	return (sum);
 }
