@@ -7,13 +7,15 @@
 int sum_dlistint(dlistint_t *head)
 {
 	int sum;
+	dlistint_t *temp = malloc(sizeof(dlistint_t));
 
+	temp = head;
 	if (head == NULL)
-	return (0)
-	while (head != NULL)
+	return (0);
+	while (temp != NULL)
 	{
-		sum += head->n;
-		head = head->next;
+		sum += temp->n;
+		temp = temp->next;
 	}
 return (sum);
 }
