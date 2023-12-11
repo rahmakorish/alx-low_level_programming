@@ -1,0 +1,3 @@
+#include <stdio.h>
+#include "100-tests.py"
+
