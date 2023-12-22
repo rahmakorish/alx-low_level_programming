@@ -16,12 +16,11 @@ void hash_table_print(const hash_table_t *ht)
 		{
 			if (index != ht->size)
 			printf("'%s': '%s', ", ht->array[index]->key, ht->array[index]->value);
-			else 
+			else if (index == ht->size - 2)
 			printf("'%s': '%s'\n}", ht->array[index]->key, ht->array[index]->value);
 		}
 		else
 			continue;
-		
 	}
 	printf("}\n");
 }
