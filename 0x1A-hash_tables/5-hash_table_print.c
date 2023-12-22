@@ -21,8 +21,8 @@ void hash_table_print(const hash_table_t *ht)
 			{
 				if (!first)
 					printf(", ");
-			printf("'%s': '%s'", ht->array[index]->key, ht->array[index]->value);
-			first = 0;
+				printf("'%s': '%s'", ht->array[index]->key, ht->array[index]->value);
+				first = 0;
 			}
 		}
 		else
