@@ -13,7 +13,11 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	if (index < ht->size)
 	{
 		if (ht->array[index] != NULL)
+		{
 			return (ht->array[index]->value);
+		}
+		else
+			return (NULL);
 	}
 	else
 	return (NULL);
