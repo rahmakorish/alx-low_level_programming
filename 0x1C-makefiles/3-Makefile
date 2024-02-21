@@ -10,4 +10,7 @@ clean:
 oclean:
 	rm -f $(OBJ)
 fclean:
-	$(CC) $(CFLAGS) -c -o *.o *.c
+	rm -f *~ $(NAME)
+	rm -f $(OBJ)
+re:
+	fclean all
