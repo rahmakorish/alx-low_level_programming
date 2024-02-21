@@ -1,7 +1,8 @@
 CC=gcc
 SRC=main.c
 SRC+=school.c
-OBJ=$(file:.c=.o)
+OBJ=$(SRC:.c=.o)
 NAME=school
-all: $(OBJ)
-	$(CC) $(SRC) -o $(NAME)
+all: $(NAME)
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
