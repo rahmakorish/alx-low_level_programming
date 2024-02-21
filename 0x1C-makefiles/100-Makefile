@@ -1,10 +1,9 @@
+include 4-Makefile
 CC=gcc
 SRC=main.c
 SRC+=school.c
 OBJ=$(SRC:.c=.o)
 NAME=school
-RM=rm -f
-CFLAGS=-Wall -Werror -Wextra -pedantic
 
 all: $(NAME)
 $(NAME): $(OBJ)
